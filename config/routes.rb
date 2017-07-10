@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-root'boketes#index'
+root'boke#index'
 
- get 'bokete' => 'boketes#index'
+ get 'boke' => 'boke#index'
 
 
 end

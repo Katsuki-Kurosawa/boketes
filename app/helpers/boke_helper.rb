@@ -1,0 +1,2 @@
+module BokeHelper
+end
