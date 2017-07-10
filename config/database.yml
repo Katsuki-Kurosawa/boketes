@@ -51,5 +51,5 @@ production:
   <<: *default
   database: boketes_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: kckh
   socket: /var/lib/mysql/mysql.sock
