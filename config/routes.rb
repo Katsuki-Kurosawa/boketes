@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-root'boke#index'
+root'themes#index'
 
- get 'boke' => 'boke#index'
+ get 'themes' => 'themes#index'
 
 
 end

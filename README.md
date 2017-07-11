@@ -5,7 +5,7 @@
 |Column|Type|Option|
 |:--|--:|:--:|
 |name|string|null: false |
-|mail|string|null: false |
+|mail|string|null: false ,unique: true|
 |pass|string|null: false |
 
 ### Association
@@ -17,10 +17,9 @@
 
 |Column|Type|Option|
 |:--|--:|:--:|
-|title|text||
+|title|string||
 |image|string||
 |user_id|integer||
-
 
 ### Association
 ・belongs_to :user
@@ -31,11 +30,12 @@
 
 |Column|Type|Option|
 |:--|--:|:--:|
-|answer|string|index: true|
-|user_id|string|index: true|
-|theme_id|string|index: true|
+|answer|string||
+|user_id|string||
+|theme_id|string||
 
 ### Association
-・has_many :users , through: group_users 
-・has_many :messages
+・belongs_to :user
+・belongs_to :theme
+
 
