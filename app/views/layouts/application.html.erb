@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Boketes</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Boketes</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-    <header class="header">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<header class="header">
 
-<a href="/"><img src="/assets/logo-ef849330b4db46248801d160567a68142e7ce88a26a9b995b42735eb767d22df.png" class="logo" /></a>
-<div class="nav">
-<ul class="navs">
-  <li class="nav"><%=link_to'ボケ' ,'http://www.google.co.jp/'%></li>
- <li class="nav">お題</li>
-  <li class="nav">職人</li>
-</ul>
-</div>
 
-<div class="nav__user">
-<ul class="nav__users">
-  <li class="nav__user">新規ユーザー</li>
-  <li class="nav__user">ログイン</li>
-  <li class="nav__user">ヘルプ</li>
-</ul>
-</div>
+  <%= link_to root_path do %>
+  <%= image_tag "/assets/logo-ef849330b4db46248801d160567a68142e7ce88a26a9b995b42735eb767d22df.png", class: "logo" %>
+  <% end %>
+
+
+  <div class="nav">
+    <ul class="navs">
+      <li class="nav"><%=link_to'ボケ' ,'http://www.google.co.jp/'%></li>
+      <li class="nav">お題</li>
+      <li class="nav">職人</li>
+    </ul>
+  </div>
+
+  <div class="nav__user">
+    <ul class="nav__users">
+      <li class="nav__user">新規ユーザー</li>
+      <li class="nav__user">ログイン</li>
+      <li class="nav__user">ヘルプ</li>
+    </ul>
+  </div>
 </header>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <%= yield %>
+</body>
 </html>
