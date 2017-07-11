@@ -113,6 +113,61 @@ margin-top: 140px;
  font-size:23px;
   font-weight: bold;
  font-family: 'Impact';
-}// Place all the styles related to the themes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+}
+
+.new_content{
+  background-color: white;
+  height:1000px;
+  width:700px;
+margin-left:15px ;
+overflow: scroll;
+}
+
+
+.new_gazous{
+  width:250px;
+  float:right;
+  margin-right:20px;
+  margin-top:-900px;
+}
+
+.new_gazouss{
+  width:270px;
+  float:right;
+  // margin-right:20px;
+  margin-top:-350px;
+}
+
+.new_gazou{
+  margin:30px 200px;
+  height:400px;
+  border: 3px solid black ;
+}
+
+.text{
+  width:550px;
+  height:50px;
+  margin-left:60px;
+  position: absolute;
+ border:solid 3px #e0e0e0;
+ border-radius:5px;
+}
+.btn{
+  width:80px;
+  height:40px;
+  background-color:#F4C536;
+ position: relative; left: 300px; top: 70px;
+color:white;
+ text-decoration:none;
+  display:block;
+    text-align:center;
+border-radius:5px;
+ border:solid 2px white;
+}
+
+h3{
+  font-size:16px;
+  font-weight:bold;
+  margin-left:60px;
+  margin-bottom:10px;
+}
