@@ -32,8 +32,16 @@
 </div>
 
 </div>
-<a href="/"><img src="/assets/gazou.png" class="gazous" /></a>
-<a href="/"><img src="/assets/gazou2.png" class="gazouss" /></a>
+
+<%= link_to root_path do %>
+  <%= image_tag "gazou.png", class: "gazous" %>
+<% end %>
+
+<%= link_to root_path do %>
+  <%= image_tag "gazou2.png", class: "gazouss" %>
+<% end %>
+
+
 </div>
    <footer>
       <p class="footer">Copyright(C) boketemasun.</p>
