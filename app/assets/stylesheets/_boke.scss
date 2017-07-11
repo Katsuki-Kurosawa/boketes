@@ -1,6 +1,6 @@
+
 .body {
-// background: image-url("aa.png");
-background-color:#ECC027;
+background: image-url("aa.png");
 height:1500px;
 }
 
@@ -32,6 +32,11 @@ width:100%;
   float:left;
 margin-left:20px;
 font-size:15px;
+}
+
+.navz{
+  text-decoration: none;
+  color:black;
 }
 
 .navs{
@@ -107,8 +112,4 @@ margin-top: 140px;
  font-size:23px;
   font-weight: bold;
  font-family: 'Impact';
-
-
-
-
 }
