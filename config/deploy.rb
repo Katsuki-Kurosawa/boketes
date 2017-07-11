@@ -5,6 +5,8 @@ lock '3.8.2'
 set :application, 'boketes'
 set :repo_url,  'git@github.com:Katsuki-Kurosawa/boketes.git'
 
+set :linked_files, %w{ config/secrets.yml }
+
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
