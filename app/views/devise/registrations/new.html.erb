@@ -1,63 +1,66 @@
 <div class="body">
-<div class="content">
-<div class="nav_bar">
-<ul class="nav_bars">
-</div>
-<div class="content_sign_up">
+  <div class="content">
+    <div class="nav_bar">
+      <ul class="nav_bars">
+      </div>
+      <div class="content_sign_up">
 
-<div class="popular">
-</div>
-<div class="kara">
-</div>
-<div clss="content3">
+        <div class="popular">
+        </div>
+        <div class="kara">
+        </div>
+        <div clss="content3">
 
 
- <p class="red">ボケてアカウント新規登録</p>
-<br/>
- <p>ボケてでは色々な人に「ボケて」もらって「評価」してもらいたいと思っています。<br/>
- 投稿したボケが、誰かの辛い時間を楽しい時間に変えることもできるし、面白い！と思うボケにコメントしたことがボケ投稿者をハッピーにすることが出来ます。<br>
-<br>
-ボケては完全に無料で利用でき、アカウントを作成すればPCサイトだけでなくスマホサイトやiOSアプリ、Androidアプリでも楽しめます。
-ボケてに登録してみんなを楽しい気持ちにしてください。</p>
+         <p class="red">ボケてアカウント新規登録</p>
+         <br/>
+         <p>ボケてでは色々な人に「ボケて」もらって「評価」してもらいたいと思っています。<br/>
+           投稿したボケが、誰かの辛い時間を楽しい時間に変えることもできるし、面白い！と思うボケにコメントしたことがボケ投稿者をハッピーにすることが出来ます。<br>
+           <br>
+           ボケては完全に無料で利用でき、アカウントを作成すればPCサイトだけでなくスマホサイトやiOSアプリ、Androidアプリでも楽しめます。
+           ボケてに登録してみんなを楽しい気持ちにしてください。</p>
 
- <div class="content_sign_ups">
+           <div class="content_sign_ups">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="user_set_bolder"></div>
+            <div class="field">
+              <%= f.label :お名前 ,class:"user_set"%> <em>(6文字以内でお願いします。)</em><br />
+              <%= f.text_field :name, autofocus: true, maxlength: "6" ,class:"user_set_text"%>
+            </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+            <div class="field">
+              <%= f.label :メールアドレス,class:"user_set" %><br />
+              <%= f.email_field :email, autofocus: true ,class:"user_set_text"%>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+            <div class="field">
+              <%= f.label :パスワード ,class:"user_set"%>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off",class:"user_set_text" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+            <div class="field">
+              <%= f.label :もう一度パスワードを入力してください,class:"user_set" %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off",class:"user_set_text" %>
+            </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+            <div>
+              <%= f.submit "新規登録", class:"user_set_btn" %>
+            </div>
+            <% end %>
 
-<%= render "devise/shared/links" %>
+          </div>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</div>
-
-</div>
-   <footer>
+    </div>
+    <footer>
       <p class="footer">Copyright(C) boketemasun.</p>
     </footer>
-</div>
+  </div>

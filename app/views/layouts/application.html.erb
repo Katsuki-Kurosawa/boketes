@@ -25,8 +25,8 @@
 
   <div class="nav__user">
     <ul class="nav__users">
-     <li class="nav__user"><%=link_to'新規ユーザー' ,'http://www.google.co.jp/',class:"navz"%></li>
-       <li class="nav__user"><%=link_to'ログイン' ,'http://www.google.co.jp/',class:"navz"%></li>
+     <li class="nav__user"><%=link_to'新規ユーザー' , new_user_registration_path,class:"navz"%></li>
+       <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
          <li class="nav__user"><%=link_to'ヘルプ' ,'http://www.google.co.jp/',class:"navz"%></li>
     </ul>
   </div>
