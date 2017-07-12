@@ -17,6 +17,48 @@
 <div clss="content3">
 <div class="reds">
 
+   <%= image_tag "user.png", class: "show_user_image" %>
+
+<div class="show_user_info"><%= current_user.name %>さんのページ
+<p class="show_line"></p>
+</div>
+
+
+<div class="show_user_info1"> ボケてID
+</div>
+<p class="show_line"></p>
+
+<div class="show_user_info2">生年月日
+</div>
+<p class="show_line"></p>
+
+<div class="show_user_info3">性別
+</div>
+<p class="show_line"></p>
+
+<div class="show_user_info4">ボケ投稿数
+</div>
+<p class="show_line"></p>
+
+<div class="show_user_info5">お題投稿数
+</div>
+<p class="show_line"></p>
+
+<div class="show_user_info6">プロフィール
+</div>
+<p class="show_line"></p>
+
+<p class="show_image_line_boke"><%= current_user.name %>さんが投稿したボケ</p>
+  <%= image_tag "show.jpg", class: "show_image_boke" %>
+    <%= image_tag "show.jpg", class: "show_image_boke" %>
+
+
+<p class="show_image_line_odai"><%= current_user.name %>さんが投稿したお題</p>
+  <%= image_tag "1.jpg", class: "show_image_odai" %>
+    <%= image_tag "1.jpg", class: "show_image_odai" %>
+
+
+
 
 </div>
 </div>

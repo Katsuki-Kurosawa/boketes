@@ -51,8 +51,8 @@
   -moz-border-radius: 10px; 
   border:solid 2px #F2EFED;
   background-color:#F4C536;
-    color:white;
-    margin-bottom:10px;
+  color:white;
+  margin-bottom:10px;
 }
 
 .user_set_bolder{
@@ -73,8 +73,66 @@
 .user_nav{
   width:120px;
   background-color:white;
-          border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px; 
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
+}
 
+.show_user_image{
+  height:200px;
+  width:200px;
+  margin-left:50px;
+
+  float:left;
+}
+
+.show_user_info{
+  margin-top:40px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+
+.show_line{
+  width:430px;
+  border-bottom:solid 1px #DDDDDD;
+  float:right;
+  margin-bottom:7px;
+  margin-right:20px;
+}
+
+.show_image_boke{
+  height:200px;
+  width:200px;
+  float:left;
+  margin-left:30px;
+
+}
+
+.show_image_line_boke{
+  margin-top:70px;
+  border-bottom: 3px solid #F4C536;
+  width:600px;
+  margin-left:30px;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.show_image_odai{
+  height:200px;
+  width:200px;
+  float:left;
+  margin-left:30px;
+
+}
+
+.show_image_line_odai{
+  margin-top:300px;
+  border-bottom: 3px solid #F4C536;
+  width:600px;
+  margin-left:30px;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:10px;
 }
