@@ -22,6 +22,6 @@ set :keep_releases, 5
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:legacy_restart'
+    invoke 'unicorn:restart'
   end
 end

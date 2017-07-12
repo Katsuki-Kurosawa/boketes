@@ -1,5 +1,5 @@
 app_path = File.expand_path('../../../', __FILE__)
-working_directory app_path
+working_directory "#{app_path}"/current
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
@@ -7,7 +7,7 @@ stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 listen 3000
 timeout 60
 
-preload_app true
+preload_app false
 GC.respond_to?(:copy_on_write_friendly=) && GC.copy_on_write_friendly = true
 
 check_client_connection false
