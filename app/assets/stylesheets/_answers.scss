@@ -13,9 +13,13 @@ margin: 0 auto;
 overflow: scroll;
 }
 
+.nav_bars{
+  margin-top:100px;
+}
+
 .content2{
   background-color: white;
-  height:1300px;
+  height:1150px;
   width:700px;
 margin-left:15px ;
 overflow: scroll;
@@ -38,6 +42,7 @@ font-size:15px;
 .navz{
   text-decoration: none;
   color:black;
+  margin-left:10px;
 }
 
 .navs{
@@ -64,10 +69,7 @@ margin-left:200px;
   font-size:15px;
 }
 
-.popular{
-  height:50px;
-  // width:400px;
-}
+
 
 .red{
   border-bottom: 3px solid #F4C536;
@@ -113,6 +115,19 @@ margin-top: 140px;
  font-size:23px;
   font-weight: bold;
  font-family: 'Impact';
-}// Place all the styles related to the themes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+}
+
+.nav_bar li{
+  font-size:16px;
+  font-weight:bold;
+  float:left;
+  margin-left:15px;
+  margin-right:20px;
+}
+
+.nav_bars1{
+  width:70px;
+  background-color:white;
+
+}
+

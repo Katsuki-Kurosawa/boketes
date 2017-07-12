@@ -1,43 +1,54 @@
 <div class="body">
-<div class="content">
-<div class="new_content">
-<div class="popular">
-</div>
-<div class="kara">
-</div>
-<div clss="content3">
+  <div class="content">
+    <div class="nav_bar">
+      <ul class="nav_bars">
+        <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
+        <li><%=link_to'注目' ,root_path,class:"navz"%></li>
+        <li><%=link_to'人気' ,root_path,class:"navz"%></li>
+        <li><%=link_to'コラボ' ,root_path,class:"navz"%></li>
+        <li><%=link_to'セレクト' ,root_path,class:"navz"%></li>
+        <li><%=link_to'ピックアップ' ,root_path,class:"navz"%></li>
+        <li><%=link_to'お題投稿' ,root_path,class:"navz"%></li>
+      </ul>
+    </div>
+    <div class="new_content">
+      <div class="popular">
+      </div>
+      <div class="kara">
+      </div>
+      <div clss="content3">
 
 
-<p class="red">このお題でボケる</p>
-<div class="reds">
-<%= link_to new_theme_path do %>
-  <%= image_tag "1.jpg", class: "gazou" %>
-<% end %>
+        <p class="red">このお題でボケる</p>
+        <div class="reds">
+          <%= link_to new_theme_path do %>
+          <%= image_tag "1.jpg", class: "gazou" %>
+          <% end %>
 
-<%= form_tag('/products/search', method: :get) do %>
-<h3>ボケテキスト</h3>
-                <input class="text" name=" " type="text" value="">
-                <input type="submit" value="投稿する" class="btn">
-              <% end %>
-
-
-
-</div>
-</div>
-
-</div>
-
-<%= link_to root_path do %>
-  <%= image_tag "gazou.png", class: "new_gazous" %>
-<% end %>
-
-<%= link_to root_path do %>
-  <%= image_tag "gazou2.png", class: "new_gazouss" %>
-<% end %>
+          <%= form_tag('/products/search', method: :get) do %>
+          <h3>ボケテキスト</h3>
+          <input class="text" name=" " type="text" value="">
+          <input type="submit" value="投稿する" class="btn">
+          <% end %>
 
 
-</div>
-   <footer>
-      <p class="footer">Copyright(C) boketemasun.</p>
-    </footer>
+
+        </div>
+      </div>
+
+    </div>
+
+    <%= link_to root_path do %>
+    <%= image_tag "gazou.png", class: "new_gazous" %>
+    <% end %>
+
+    <%= link_to root_path do %>
+    <%= image_tag "gazou2.png", class: "new_gazouss" %>
+    <% end %>
+
+
+  </div>
+  <footer>
+    <p class="footer">Copyright(C) boketemasun.</p>
+  </footer>
 </div>
