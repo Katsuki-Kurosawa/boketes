@@ -25,9 +25,15 @@
 
   <div class="nav__user">
     <ul class="nav__users">
+
      <li class="nav__user"><%=link_to'新規ユーザー' , new_user_registration_path,class:"navz"%></li>
        <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
          <li class="nav__user"><%=link_to'ヘルプ' ,'http://www.google.co.jp/',class:"navz"%></li>
+
+
+         <% if user_signed_in? %>
+         <li class="nav__user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete ,class:"navz"%></li>
+         <% end%>
     </ul>
   </div>
 </header>
