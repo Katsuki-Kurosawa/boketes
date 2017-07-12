@@ -26,19 +26,25 @@
   <div class="nav__user">
     <ul class="nav__users">
 
-     <li class="nav__user"><%=link_to'新規ユーザー' , new_user_registration_path,class:"navz"%></li>
-       <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
-         <li class="nav__user"><%=link_to'ヘルプ' ,'http://www.google.co.jp/',class:"navz"%></li>
+      <% if user_signed_in? %>
+      <%= image_tag "user.png", class: "user_image" %>
+      <li class="nav__user">
+        <%=link_to current_user.name , new_user_registration_path,class:"navz"%></li>
+        <li class="nav__user"><%=link_to'マイページ' ,"/users/#{current_user.id}",class:"navz"%></li>
+        <% end%>
 
+        <% unless user_signed_in?%>
+        <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
+        <%end%>
+        <li class="nav__user"><%=link_to'ヘルプ' ,'/',class:"navz"%></li>
+        <% if user_signed_in? %>
+        <li class="nav__user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete ,class:"navz"%></li>
+        <% end%>
+      </ul>
+    </div>
+  </header>
 
-         <% if user_signed_in? %>
-         <li class="nav__user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete ,class:"navz"%></li>
-         <% end%>
-    </ul>
-  </div>
-</header>
-
-<body>
-  <%= yield %>
-</body>
-</html>
+  <body>
+    <%= yield %>
+  </body>
+  </html>
