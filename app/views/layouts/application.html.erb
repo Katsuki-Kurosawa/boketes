@@ -39,9 +39,7 @@
         <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
         <%end%>
         <li class="nav__user"><%=link_to'ヘルプ' ,'/',class:"navz"%></li>
-        <% if user_signed_in? %>
-        <li class="nav__user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete ,class:"navz"%></li>
-        <% end%>
+
       </ul>
     </div>
   </header>

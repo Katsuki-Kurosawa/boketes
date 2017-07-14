@@ -3,12 +3,12 @@
 <div class="nav_bar">
 <ul class="nav_bars">
   <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
-   <li><%=link_to'注目' ,root_path,class:"navz"%></li>
-    <li><%=link_to'人気' ,root_path,class:"navz"%></li>
-  <li><%=link_to'コラボ' ,root_path,class:"navz"%></li>
-  <li><%=link_to'セレクト' ,root_path,class:"navz"%></li>
-  <li><%=link_to'ピックアップ' ,root_path,class:"navz"%></li>
-  <li><%=link_to'殿堂入り' ,root_path,class:"navz"%></li>
+   <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
+    <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
+
+<li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
 </ul>
 </div>
 <div class="content2">
@@ -18,23 +18,23 @@
 </div>
 <div clss="content3">
 <div class="reds">
-<%= link_to new_theme_path do %>
+<%= link_to new_answer_path do %>
   <%= image_tag "1.jpg", class: "new_gazou" %>
 <% end %>
 
-<%= link_to new_theme_path do %>
+<%= link_to new_answer_path do %>
   <%= image_tag "2.jpg", class: "new_gazou" %>
 <% end %>
 
-<%= link_to new_theme_path do %>
+<%= link_to new_answer_path do %>
   <%= image_tag "3.jpg", class: "new_gazou" %>
 <% end %>
 
-<%= link_to new_theme_path do %>
+<%= link_to new_answer_path do %>
   <%= image_tag "6.jpg", class: "new_gazou" %>
 <% end %>
 
-<%= link_to new_theme_path do %>
+<%= link_to new_answer_path do %>
   <%= image_tag "7.jpg", class: "new_gazou" %>
 <% end %>
 

@@ -1,13 +1,15 @@
 <div class="body">
 <div class="content">
-<div class="nav_bar">
+<div class="nav_bar_user">
+
 <ul class="nav_bars">
-  <li class="user_nav"><%=link_to'プロフィール' ,root_path,class:"navz"%></li>
-    <li><%=link_to'投稿ボケ' ,root_path,class:"navz"%></li>
-  <li><%=link_to'投稿お題' ,root_path,class:"navz"%></li>
-  <li><%=link_to'お気に入り職人' ,root_path,class:"navz"%></li>
-  <li><%=link_to'ボケコレ' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1_user"><%=link_to'プロフィール' ,root_path,class:"navz"%></li>
+   <li class="nav_bars1_user"><%=link_to'投稿ボケ' ,root_path,class:"navz"%></li>
+    <li class="nav_bars1_user"><%=link_to'投稿お題' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1_user"><%=link_to'ボケコレ' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1_user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete, class:"navz"%></li>
 </ul>
+
 </div>
 <div class="content2">
 <div class="popular">

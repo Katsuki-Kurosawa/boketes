@@ -8,7 +8,7 @@
   <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
   <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
 
-<li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
+<li class="nav_bars1"><%=link_to'お題投稿' ,new_theme_path,class:"navz"%></li>
 </ul>
     </div>
     <div class="new_content">
@@ -19,24 +19,16 @@
       <div clss="content3">
 
 
-        <p class="red">手持ちの写真からお題を投稿する</p>
+        <p class="red">このお題でボケる</p>
         <div class="reds">
-
-
-          <%= form_tag('/products/search', method: :get) do %>
-     <P class="image_toukou_info"> </P>
-
-   <%= link_to new_theme_path do %>
-          <%= image_tag "image3.png", class: "image3_toukou" %>
+          <%= link_to new_theme_path do %>
+          <%= image_tag "1.jpg", class: "gazou" %>
           <% end %>
 
-
-<label class='chat-footer__file'>
-<div class="image_toukou_btn2"><p class="image_toukou_btn_in">1.ファイルを選択</p></div>
-<input type="file"  style="display: none;" >
-</label>
-
-          <input type="submit" value="2.ファイルをアップロード" class="image_toukou_btn3">
+          <%= form_tag('/products/search', method: :get) do %>
+          <h3>ボケテキスト</h3>
+          <input class="text" name=" " type="text" value="">
+          <input type="submit" value="投稿する" class="btn">
           <% end %>
 
 

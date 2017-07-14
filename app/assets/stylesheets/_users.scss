@@ -67,7 +67,7 @@
 .user_image{
   height:30px;
   width:30px;
-  position: relative; right: 380px; bottom: 5px;
+  position: relative; right: 250px; bottom: 5px;
 }
 
 .user_nav{
@@ -124,7 +124,6 @@
   width:200px;
   float:left;
   margin-left:30px;
-
 }
 
 .show_image_line_odai{
@@ -142,3 +141,28 @@
   margin-top:10px;
   font-weight:bold;
 }
+
+.nav_bar_user li{
+  font-size:16px;
+  font-weight:bold;
+  float:left;
+  margin-left:15px;
+  margin-right:35px;
+}
+
+
+
+.nav_bars1_user{
+
+  width:100px;
+  text-align:center;
+  padding-top:7px;
+}
+
+.nav_bars1_user:hover{
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius:10px 10px 0px 0px;
+}
+

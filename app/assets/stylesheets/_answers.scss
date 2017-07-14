@@ -1,6 +1,5 @@
 
 .body {
-// background: image-url("aa.png");
 background-image: image-url("aa.png");
 height:1500px;
 }
@@ -42,7 +41,7 @@ font-size:15px;
 .navz{
   text-decoration: none;
   color:black;
-  margin-left:10px;
+  margin-left:2px;
 }
 
 .navs{
@@ -61,8 +60,9 @@ margin-top:20px;
 .nav__users{
   font-weight: bold;
 margin-top:20px;
-margin-left:200px;
+margin-left:300px;
 }
+
  .nav__user{
    float:left;
   margin-left:30px;
@@ -122,12 +122,10 @@ margin-top: 140px;
   font-weight:bold;
   float:left;
   margin-left:15px;
-  margin-right:20px;
+  margin-right:23px;
 }
 
-.nav_bars1{
-  width:70px;
-  background-color:white;
 
-}
+
+
 
