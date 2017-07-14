@@ -1,15 +1,15 @@
 <div class="body">
   <div class="content">
     <div class="nav_bar">
-<ul class="nav_bars">
-  <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
-   <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
-    <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
+      <ul class="nav_bars">
+        <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
 
-<li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
-</ul>
+        <li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
+      </ul>
     </div>
     <div class="new_content">
       <div class="popular">
@@ -22,41 +22,60 @@
         <p class="red">手持ちの写真からお題を投稿する</p>
         <div class="reds">
 
+          <%= form_for @theme do |f| %>
+          <P class="image_toukou_info"> </P>
 
-          <%= form_tag('/products/search', method: :get) do %>
-     <P class="image_toukou_info"> </P>
 
-   <%= link_to new_theme_path do %>
-          <%= image_tag "image3.png", class: "image3_toukou" %>
+
+          <img id="img_prev"  src="#" class="toukou_preview"/>
+
+
+          <script type="text/javascript">
+            $(function() {
+              function readURL(input) {
+                if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                    $('#img_prev').attr('src', e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+                }
+              }
+
+              $(".a").change(function(){
+                $('#img_prev').removeClass('hidden');
+                readURL(this);
+              });
+            });
+          </script>
+
+          <%= f.label :image  do%>
+          <div class="image_toukou_btn2"><p class="image_toukou_btn_in">1.ファイルを選択</p></div>
+          <%= f.file_field :image, style: "display:none;" ,class:"a" %>
           <% end %>
 
+          <input type="submit" name="image" value="2.ファイルをアップロード" class="image_toukou_btn3" >
+        </label>
 
-<label class='chat-footer__file'>
-<div class="image_toukou_btn2"><p class="image_toukou_btn_in">1.ファイルを選択</p></div>
-<input type="file"  style="display: none;" >
-</label>
+        <% end %>
 
-          <input type="submit" value="2.ファイルをアップロード" class="image_toukou_btn3">
-          <% end %>
-
-
-
-        </div>
       </div>
-
     </div>
 
-    <%= link_to root_path do %>
-    <%= image_tag "gazou.png", class: "new_gazous" %>
-    <% end %>
-
-    <%= link_to root_path do %>
-    <%= image_tag "gazou2.png", class: "new_gazouss" %>
-    <% end %>
-
-
   </div>
-  <footer>
-    <p class="footer">Copyright(C) boketemasun.</p>
-  </footer>
+
+  <%= link_to root_path do %>
+  <%= image_tag "gazou.png", class: "new_gazous" %>
+  <% end %>
+
+  <%= link_to root_path do %>
+  <%= image_tag "gazou2.png", class: "new_gazouss" %>
+  <% end %>
+
+
+</div>
+<footer>
+  <p class="footer">Copyright(C) boketemasun.</p>
+</footer>
 </div>
