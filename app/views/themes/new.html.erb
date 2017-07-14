@@ -30,6 +30,25 @@
           <img id="img_prev"  src="#" class="toukou_preview"/>
 
 
+          <script type="text/javascript">
+            $(function() {
+              function readURL(input) {
+                if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                    $('#img_prev').attr('src', e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+                }
+              }
+
+              $(".a").change(function(){
+                $('#img_prev').removeClass('hidden');
+                readURL(this);
+              });
+            });
+          </script>
 
           <%= f.label :image  do%>
           <div class="image_toukou_btn2"><p class="image_toukou_btn_in">1.ファイルを選択</p></div>
