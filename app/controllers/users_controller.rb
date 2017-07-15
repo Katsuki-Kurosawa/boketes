@@ -7,8 +7,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @theme = @user.themes.all
-    @answer = @user.answers.all
+    @theme = @user.themes.all.order("created_at   DESC").limit(3)
+    @answer = @user.answers.all.order("created_at   DESC").limit(3)
   end
 
 end

@@ -1,85 +1,99 @@
 <div class="body">
-<div class="content">
-<div class="nav_bar_user">
+  <div class="content">
+    <div class="nav_bar_user">
 
-<ul class="nav_bars">
-  <li class="nav_bars1_user"><%=link_to'プロフィール' ,root_path,class:"navz"%></li>
-   <li class="nav_bars1_user"><%=link_to'投稿ボケ' ,root_path,class:"navz"%></li>
-    <li class="nav_bars1_user"><%=link_to'投稿お題' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1_user"><%=link_to'ボケコレ' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1_user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete, class:"navz"%></li>
-</ul>
+      <ul class="nav_bars">
+        <li class="nav_bars1_user"><%=link_to'プロフィール' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1_user"><%=link_to'投稿ボケ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1_user"><%=link_to'投稿お題' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1_user"><%=link_to'ボケコレ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1_user"><%=link_to'ログアウト' ,destroy_user_session_path, method: :delete, class:"navz"%></li>
+      </ul>
 
-</div>
-<div class="content2">
-<div class="popular">
-</div>
-<div class="kara">
-</div>
-<div clss="content3">
-<div class="reds">
+    </div>
+    <div class="content2">
+      <div class="popular">
+      </div>
+      <div class="kara">
+      </div>
+      <div clss="content3">
+        <div class="reds">
 
-   <%= image_tag "user.png", class: "show_user_image" %>
+         <%= image_tag "user.png", class: "show_user_image" %>
 
-<div class="show_user_info"><%= current_user.name %>さんのページ
-<p class="show_line"></p>
-</div>
-
-
-<div class="show_user_info1"> ボケてID
-</div>
-<p class="show_line"></p>
-
-<div class="show_user_info2">生年月日
-</div>
-<p class="show_line"></p>
-
-<div class="show_user_info3">性別
-</div>
-<p class="show_line"></p>
-
-<div class="show_user_info4">ボケ投稿数
-<p class="show_user_info_sub"><%= @answer.length%> 個</p>
-</div>
-<p class="show_line"></p>
-
-<div class="show_user_info5">お題投稿数
-<p class="show_user_info_sub"><%= @theme.length%> 個</p>
-</div>
-<p class="show_line"></p>
-
-<div class="show_user_info6">プロフィール
-</div>
-<p class="show_line"></p>
-
-<p class="show_image_line_boke"><%= current_user.name %>さんが投稿したボケ</p>
-  <%= image_tag "show.jpg", class: "show_image_boke" %>
-    <%= image_tag "show.jpg", class: "show_image_boke" %>
+         <div class="show_user_info"><%= current_user.name %>さんのページ
+          <p class="show_line"></p>
+        </div>
 
 
-<p class="show_image_line_odai"><%= current_user.name %>さんが投稿したお題</p>
-  <%= image_tag "1.jpg", class: "show_image_odai" %>
-    <%= image_tag "1.jpg", class: "show_image_odai" %>
+        <div class="show_user_info1"> ボケてID
+          <p class="show_user_info_sub"><%= @user.id%></p>
+        </div>
+        <p class="show_line"></p>
+
+        <div class="show_user_info2">生年月日
+        </div>
+        <p class="show_line"></p>
+
+        <div class="show_user_info3">性別
+        </div>
+        <p class="show_line"></p>
+
+        <div class="show_user_info4">ボケ投稿数
+          <p class="show_user_info_sub"><%= @answer.length%> </p>
+        </div>
+        <p class="show_line"></p>
+
+        <div class="show_user_info5">お題投稿数
+          <p class="show_user_info_sub"><%= @theme.length%> </p>
+        </div>
+        <p class="show_line"></p>
+
+        <div class="show_user_info6">プロフィール
+        </div>
+        <p class="show_line"></p>
+
+        <p class="show_image_line_boke"><%= current_user.name %>さんが投稿したボケ</p>
+
+
+        <% @answer.each do |i|%>
+        <% if i.theme.image? %>
+
+        <div class="root_toukou_image_set"><%= image_tag  i.theme.image, class: "root_toukou_image"  %>
+         <p class="root_answer_toukou_user">投稿者:<%= i.user.name%>っち</p>
+         <div class="root_answer_toukou_boke"><%= i.answer %></div></div>
+         <% end %>
+         <% end %>
+
+         <p class="show_image_line_odai"><%= current_user.name %>さんが投稿したお題</p>
+
+         <% @theme.each do |i|%>
+         <% if i.image? %>
+
+         <div class="root_toukou_image_set"><%= image_tag  i.image, class:"root_toukou_image"  %></p>
+           <p class="root_answer_toukou_user">お題投稿者:<%= i.user.name%>っち</p></div>
+
+           <% end %>
+           <% end %>
 
 
 
+         </div>
+       </div>
 
-</div>
-</div>
+     </div>
 
-</div>
+     <%= link_to root_path do %>
+     <%= image_tag "gazou.png", class: "gazous" %>
+     <% end %>
 
-<%= link_to root_path do %>
-  <%= image_tag "gazou.png", class: "gazous" %>
-<% end %>
-
-<%= link_to root_path do %>
-  <%= image_tag "gazou2.png", class: "gazouss" %>
-<% end %>
+     <%= link_to root_path do %>
+     <%= image_tag "gazou2.png", class: "gazouss" %>
+     <% end %>
 
 
-</div>
+   </div>
    <footer>
-      <p class="footer">Copyright(C) boketemasun.</p>
-    </footer>
+    <p class="footer">Copyright(C) boketemasun.</p>
+  </footer>
 </div>
