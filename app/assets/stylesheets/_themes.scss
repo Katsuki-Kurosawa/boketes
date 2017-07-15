@@ -1,7 +1,7 @@
 
 .body {
-background-image: image-url("aa.png");
-height:1500px;
+  background-image: image-url("aa.png");
+  height:1500px;
 }
 
 .content{
@@ -10,9 +10,9 @@ height:1500px;
   width:1000px;
   margin: 0 auto;
   overflow: scroll;
-          border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px; 
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
 
 }
 
@@ -95,7 +95,6 @@ height:1500px;
 .gazouss{
   width:270px;
   float:right;
-  // margin-right:20px;
   margin-top:-650px;
 }
 
@@ -108,6 +107,14 @@ height:1500px;
 }
 
 .new_content{
+  background-color: white;
+  height:1000px;
+  width:700px;
+  margin-left:15px ;
+  overflow: scroll;
+}
+
+.new_answer_content{
   background-color: white;
   height:1000px;
   width:700px;
@@ -129,13 +136,14 @@ height:1500px;
 }
 
 
-
 .toukou_image{
-    margin-top:30px;
-  margin-left:80px;
-  height:400px;
+  margin-top:30px;
+  height:350px;
   border: 2px solid black ;
+}
 
+.toukou_image_set{
+  text-align:center;
 }
 
 
@@ -188,9 +196,24 @@ h3{
 
 .nav_bars1:hover{
   background-color: white;
-      border-radius: 10px 10px 0px 0px;
-    -webkit-border-radius: 10px 10px 0px 0px;
-    -moz-border-radius:10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius:10px 10px 0px 0px;
+}
+
+.toukou_user{
+  color:#6291D3;
+ margin-top:10px;
+text-align:center;
+ font-weight:bold;
+}
+
+
+.toukou_user_border{
+  border-bottom:1px solid #F2EFED;
+  margin-top:20px;
+   margin-left:80px;
+  width:500px;
 }
 
 .image_toukou{
@@ -202,7 +225,7 @@ h3{
 }
 
 .image_toukou_btn{
-    width:160px;
+  width:160px;
   height:40px;
   background-color:#F4C536;
   position: relative; left: 250px; top: 30px;
@@ -212,18 +235,18 @@ h3{
   text-align:center;
   border-radius:5px;
   border:solid 2px white;
-font-size:13px;
- font-weight: bold;
+  font-size:13px;
+  font-weight: bold;
 }
 
 .image_toukou_info{
   text-align:center;
-   font-weight: bold;
-   margin-top:20px;
+  font-weight: bold;
+  margin-top:20px;
 }
 
 .image_toukou_btn2{
-    width:160px;
+  width:160px;
   height:25px;
   background-color:white;
   position: relative; left: 265px; top: 40px;
@@ -233,15 +256,15 @@ font-size:13px;
   text-align:center;
   border-radius:5px;
   border:solid 2px white;
-font-size:15px;
- font-weight: bold;
- color:black;
+  font-size:15px;
+  font-weight: bold;
+  color:black;
   margin-bottom: 10px; border: 3px solid #EFEFEF;
   padding-top:5px;
 }
 
 .image_toukou_btn3{
-    width:200px;
+  width:200px;
   height:35px;
   background-color:#F4C536;
   position: relative; left: 250px; top: 50px;
@@ -251,15 +274,15 @@ font-size:15px;
   text-align:center;
   border-radius:5px;
   border:solid 2px white;
-font-size:13px;
- font-weight: bold;
+  font-size:13px;
+  font-weight: bold;
 }
 
 .image3_toukou{
-width:500px;
-height:300px;
-margin-left:100px;
-margin-top:40px;
+  width:500px;
+  height:300px;
+  margin-left:100px;
+  margin-top:40px;
 }
 
 .toukou_preview{

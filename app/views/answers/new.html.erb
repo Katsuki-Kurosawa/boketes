@@ -11,7 +11,7 @@
 <li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
 </ul>
     </div>
-    <div class="new_content">
+    <div class="new_answer_content">
       <div class="popular">
       </div>
       <div class="kara">
@@ -21,14 +21,11 @@
 
         <p class="red">このお題でボケる</p>
         <div class="reds">
-          <%= link_to new_theme_path do %>
-          <%= image_tag @theme.image, class: "boke_gazou" %>
-          <% end %>
 
-          <%= form_tag('/products/search', method: :get) do %>
-          <h3>ボケテキスト</h3>
-          <input class="text" name=" " type="text" value="">
-          <input type="submit" value="投稿する" class="btn">
+         <P class="boke_gazou_center"> <%= image_tag @theme.image, class: "boke_gazou" %></P>
+          <%= form_for [@theme, @answer] do |f|  %>
+          <%= f.text_field :answer ,name:"answer" ,  value:"" ,class:"text" %>
+          <%= f.submit value:"投稿する" , class:"btn" %>
           <% end %>
 
 

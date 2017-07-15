@@ -7,7 +7,6 @@ def index
 
   def new
     @theme = Theme.new
-
   end
 
 def create

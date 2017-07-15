@@ -1,58 +1,49 @@
 <div class="body">
-<div class="content">
-<div class="nav_bar">
+  <div class="content">
+    <div class="nav_bar">
 <ul class="nav_bars">
   <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
-   <li><%=link_to'注目' ,root_path,class:"navz"%></li>
-    <li><%=link_to'人気' ,root_path,class:"navz"%></li>
-  <li><%=link_to'コラボ' ,root_path,class:"navz"%></li>
-  <li><%=link_to'セレクト' ,root_path,class:"navz"%></li>
-  <li><%=link_to'ピックアップ' ,root_path,class:"navz"%></li>
-  <li><%=link_to'殿堂入り' ,root_path,class:"navz"%></li>
+   <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
+    <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
+  <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
+
+<li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
 </ul>
-</div>
-<div class="content2">
-<div class="kara">
-</div>
-<div clss="content3">
-<div class="reds">
-<p class="red">人気のボケ</p>
-<%= link_to root_path do %>
-  <%= image_tag "red.jpg", class: "gazou" %>
-<% end %>
-<p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
-</div>
-
-<div class="reds">
-<p class="red">人気のボケ</p>
-<%= link_to root_path do %>
-  <%= image_tag "red.jpg", class: "gazou" %>
-<% end %>
-<p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
-</div>
-
-<div class="reds">
-<p class="red">人気のボケ</p>
-<%= link_to root_path do %>
-  <%= image_tag "red.jpg", class: "gazou" %>
-<% end %>
-<p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
-</div>
-</div>
-
-</div>
-
-<%= link_to root_path do %>
-  <%= image_tag "gazou.png", class: "gazous" %>
-<% end %>
-
-<%= link_to root_path do %>
-  <%= image_tag "gazou2.png", class: "gazouss" %>
-<% end %>
+    </div>
+    <div class="new_content">
 
 
-</div>
-   <footer>
-      <p class="footer">Copyright(C) boketemasun.</p>
-    </footer>
+
+<% @answer.each do |i|%>
+<% if i.theme.image? %>
+
+  <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
+
+<p class="answer_toukou_user">投稿者:<%= i.user.name %>っち</p>
+<p class="answer_toukou_boke"><%= i.answer %></p>
+<p class="answer_toukou_user_border"></p>
+
+<%end%>
+
+<%end%>
+
+
+
+
+    </div>
+
+    <%= link_to root_path do %>
+    <%= image_tag "gazou.png", class: "new_gazous" %>
+    <% end %>
+
+    <%= link_to root_path do %>
+    <%= image_tag "gazou2.png", class: "new_gazouss" %>
+    <% end %>
+
+
+  </div>
+  <footer>
+    <p class="footer">Copyright(C) boketemasun.</p>
+  </footer>
 </div>

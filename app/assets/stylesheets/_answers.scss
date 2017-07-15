@@ -86,9 +86,14 @@ margin-left:300px;
 }
 
 .boke_gazou{
-   margin:30px;
-   margin-left:100px;
+  margin-top:40px;
+  margin-bottom:30px;
   height:400px;
+
+}
+
+.boke_gazou_center{
+   text-align:center;
 }
 
 .odai{
@@ -111,7 +116,6 @@ font-size:35px;
 .gazouss{
   width:270px;
   float:right;
-  // margin-right:20px;
   margin-top:-650px;
 }
 
@@ -131,7 +135,38 @@ margin-top: 140px;
   margin-right:23px;
 }
 
+.toukou_image{
+  margin-top:30px;
+  height:350px;
+  border: 2px solid black ;
+}
+
+.toukou_image_set{
+  text-align:center;
+}
 
 
+.answer_toukou_user{
+  color:#6291D3;
+ margin-top:10px;
+ font-weight:bold;
+ text-align:center;
+}
+
+
+.answer_toukou_user_border{
+  border-bottom:1px solid #F2EFED;
+  margin-top:20px;
+   margin-left:80px;
+  width:500px;
+}
+
+.answer_toukou_boke{
+  color:#6291D3;
+ margin-top:10px;
+ font-weight:bold;
+text-align:center;
+font-size:40px;
+}
 
 
