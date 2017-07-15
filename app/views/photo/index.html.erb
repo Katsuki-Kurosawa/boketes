@@ -20,9 +20,9 @@
 
 
         <p class="red">面白いボケがつきそうな写真探して投稿してみよう！</p>
-        <div class="reds">
+  
           <%= link_to new_theme_path do %>
-          <%= image_tag "image_toukou.png", class: "image_toukou" %>
+        <p class="image_toukou_set">  <%= image_tag "image_toukou.png", class: "image_toukou" %></p>
           <% end %>
 
           <%= form_tag(new_theme_path, method: :get) do %>
@@ -32,7 +32,7 @@
 
 
 
-        </div>
+
       </div>
 
     </div>
