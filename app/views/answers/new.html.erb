@@ -22,7 +22,7 @@
         <p class="red">このお題でボケる</p>
         <div class="reds">
           <%= link_to new_theme_path do %>
-          <%= image_tag "1.jpg", class: "gazou" %>
+          <%= image_tag @theme.image, class: "boke_gazou" %>
           <% end %>
 
           <%= form_tag('/products/search', method: :get) do %>

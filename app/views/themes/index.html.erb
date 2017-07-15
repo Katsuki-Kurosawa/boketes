@@ -21,11 +21,11 @@
 
 <% @theme.each do |i|%>
 <% if i.image? %>
-
-<%= link_to new_answer_path do %>
+<%= link_to new_theme_answer_path(i.id) do %>
   <%= image_tag  i.image, class: "toukou_image" %>
 <% end %>
 <%end%>
+
 <%end%>
 
 </div>

@@ -2,6 +2,7 @@ class ThemesController < ApplicationController
 
 def index
   @theme = Theme.all.order("created_at DESC").limit(20)
+ @themes = @theme_id
   end
 
   def new
