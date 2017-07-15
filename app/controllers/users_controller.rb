@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 
 
   def show
-    
+    @user = current_user
+    @theme = @user.themes.all
+    @answer = @user.answers.all
   end
 
 end
