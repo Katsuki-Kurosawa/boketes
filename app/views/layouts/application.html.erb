@@ -28,7 +28,9 @@
     <ul class="nav__users">
 
       <% if user_signed_in? %>
-      <%= image_tag "user.png", class: "user_image" %>
+   
+      <li class="nav__user_image">
+      <%= image_tag "user.png", class: "user_image" %></li>
       <li class="nav__user">
         <%=link_to current_user.name , new_user_registration_path,class:"navz"%></li>
         <li class="nav__user"><%=link_to'マイページ' ,"/users/#{current_user.id}",class:"navz"%></li>

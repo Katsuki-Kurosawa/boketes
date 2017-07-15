@@ -57,18 +57,30 @@ margin-top:20px;
 }
 
 
+
 .nav__users{
   font-weight: bold;
 margin-top:20px;
 margin-left:300px;
 }
 
- .nav__user{
-   float:left;
+.user{
+    float:left;
   margin-left:30px;
   font-size:15px;
 }
+ .nav__user{
+   float:left;
+  margin-left:18px;
+  font-size:15px;
+}
 
+ .nav__user_image{
+   float:left;
+margin-top:-5px;
+margin-left:15px;
+
+}
 
 
 .red{
