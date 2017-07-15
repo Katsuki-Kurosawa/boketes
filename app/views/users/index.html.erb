@@ -39,7 +39,7 @@
 
   <div class="root_toukou_image_set"><%= image_tag  i.theme.image, class: "root_toukou_image" %>
 
-<p class="root_answer_toukou_user">投稿者:<%= i.user.name %>っち</p>
+<p class="root_answer_toukou_user">ボケ投稿者:<%= i.user.name %>っち|お題投稿者:<%= i.theme.user.name%>っち</p>
 <div class="root_answer_toukou_boke"><%= i.answer %></div></div>
 
 <%end%>
