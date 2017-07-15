@@ -24,7 +24,7 @@
 </div>
 
 <div class="reds">
-<p class="red">新着のボケ</p>
+<p class="red">注目のボケ</p>
 <%= link_to root_path do %>
   <%= image_tag "red.jpg", class: "gazou" %>
 <% end %>
@@ -32,11 +32,21 @@
 </div>
 
 <div class="reds">
-<p class="red">人気のボケ</p>
-<%= link_to root_path do %>
-  <%= image_tag "red.jpg", class: "gazou" %>
-<% end %>
-<p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
+<p class="red">新着のボケ</p>
+
+<% @answer.each do |i|%>
+<% if i.theme.image? %>
+
+  <div class="root_toukou_image_set"><%= image_tag  i.theme.image, class: "root_toukou_image" %>
+
+<p class="root_answer_toukou_user">投稿者:<%= i.user.name %>っち</p>
+<p class="root_answer_toukou_boke"><%= i.answer %></p>
+<p class="root_answer_toukou_user_border"></p></div>
+
+<%end%>
+
+<%end%>
+
 </div>
 </div>
 

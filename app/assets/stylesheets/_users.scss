@@ -166,3 +166,30 @@
   -moz-border-radius:10px 10px 0px 0px;
 }
 
+.root_toukou_image_set{
+  float:left;
+    margin-left:25px;
+    margin-top:20px;
+}
+
+.root_toukou_image{
+    height:200px;
+  width:200px;
+   border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius:10px 10px 0px 0px;
+
+}
+
+.root_answer_toukou_user{
+  font-size:10px;
+  font-weight:bold;
+  color:#2B6BC3;
+}
+
+.root_answer_toukou_boke{
+  font-size:25px;
+  font-weight:bold;
+  text-align:center;
+}
+
