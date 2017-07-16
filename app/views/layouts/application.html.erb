@@ -6,7 +6,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-   <%= favicon_link_tag "fa.png" %>
+  <%= favicon_link_tag "fa.png" %>
 </head>
 <header class="header">
 
@@ -28,25 +28,24 @@
     <ul class="nav__users">
 
       <% if user_signed_in? %>
-   
       <li class="nav__user_image">
-      <%= image_tag "user.png", class: "user_image" %></li>
-      <li class="nav__user">
-        <%=link_to current_user.name , new_user_registration_path,class:"navz"%></li>
-        <li class="nav__user"><%=link_to'マイページ' ,"/users/#{current_user.id}",class:"navz"%></li>
-        <% end%>
+        <%= image_tag "user.png", class: "user_image" %></li>
+        <li class="nav__user">
+          <%=link_to current_user.name , new_user_registration_path,class:"navz"%></li>
+          <li class="nav__user"><%=link_to'マイページ' ,"/users/#{current_user.id}",class:"navz"%></li>
+          <% end%>
 
-        <% unless user_signed_in?%>
-         <li class="nav__user"><%=link_to'新規登録' ,new_user_registration_path,class:"navz"%></li>
-        <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
-        <%end%>
-        <li class="nav__user"><%=link_to'ヘルプ' ,'/',class:"navz"%></li>
+          <% unless user_signed_in?%>
+          <li class="nav-user-blank nav__user"><%=link_to'新規登録' ,new_user_registration_path,class:"navz"%></li>
+          <li class="nav__user"><%=link_to'ログイン' ,user_session_path,class:"navz"%></li>
+          <%end%>
+          <li class="nav__user"><%=link_to'ヘルプ' ,'/',class:"navz"%></li>
 
-      </ul>
-    </div>
-  </header>
+        </ul>
+      </div>
+    </header>
 
-  <body>
-    <%= yield %>
-  </body>
-  </html>
+    <body>
+      <%= yield %>
+    </body>
+    </html>

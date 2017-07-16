@@ -38,7 +38,7 @@
             <div class="field">
               <%= f.label :パスワード ,class:"user_set"%>
               <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <em>(<%= @minimum_password_length %>文字以上でお願いします。)</em>
               <% end %><br />
               <%= f.password_field :password, autocomplete: "off",class:"user_set_text" %>
             </div>
