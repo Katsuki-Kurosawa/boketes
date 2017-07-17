@@ -13,6 +13,8 @@
 !/log/.keep
 !/tmp/.keep
 shared/config/secrets.yml
+ublic/uploads/tmp
 
 # Ignore Byebug command history file.
 .byebug_history
+public

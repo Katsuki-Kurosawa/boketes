@@ -7,10 +7,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= favicon_link_tag "fa.png" %>
-</head>
+
+  </head>
+
+
+
+
 <header class="header">
-
-
   <%= link_to root_path do %>
   <%= image_tag "logo.png", class: "logo" %>
   <% end %>
@@ -44,7 +47,6 @@
         </ul>
       </div>
     </header>
-
     <body>
       <%= yield %>
     </body>

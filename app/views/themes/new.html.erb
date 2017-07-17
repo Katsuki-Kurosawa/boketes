@@ -17,12 +17,20 @@
       <div class="kara">
       </div>
       <div clss="content3">
+      
+ <div class="pp"> <% flash.each do |key, value| %>
+ <%= content_tag(:div, value,  class: "flash flash__#{key}") %>
+<% end %></div>
 
 
         <p class="red">手持ちの写真からお題を投稿する</p>
         <div class="reds">
 
           <%= form_for @theme do |f| %>
+
+
+
+
           <P class="image_toukou_info"> </P>
 
 
@@ -56,8 +64,8 @@
             </div>
 
             　
-            <p class="check">  <%= f.check_box :agreement, :as => :boolean, checked:false ,class:"checkbox"%>
-              <span> 上記の規約に同意して投稿します。</span></p>
+            <div class="check">  <%= f.check_box :agreement,class:"checkbox"%>
+              <p class="check2"> 上記の規約に同意して投稿します。</p></div>
 
 
 
@@ -74,6 +82,7 @@
 
 
             <% end %>
+
           </div>
         </div>
 

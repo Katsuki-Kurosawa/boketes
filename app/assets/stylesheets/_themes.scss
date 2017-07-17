@@ -195,16 +195,16 @@ h3{
 
 .toukou_user{
   color:#6291D3;
- margin-top:10px;
-text-align:center;
- font-weight:bold;
+  margin-top:10px;
+  text-align:center;
+  font-weight:bold;
 }
 
 
 .toukou_user_border{
   border-bottom:1px solid #F2EFED;
   margin-top:20px;
-   margin-left:80px;
+  margin-left:80px;
   width:500px;
 }
 
@@ -286,32 +286,54 @@ text-align:center;
 .check{
   font-weight:bold;
 
-text-align:center;
+  positon:absolute;
+  margin-left:220px;
+
 }
 
-.checks{
-  float:left;
-  margin-top:20px;
-  margin-left:100px;
+.check2{
+float:right;
+margin-right:200px;
+positon:relative;
+
+
 }
+
 
 .check_infos{
   font-weight:bold;
-    margin-top:10px ;
-    margin-bottom: 10px;
-margin-left:20px;
-color:#EA6E29;
+  margin-top:10px ;
+  margin-bottom: 10px;
+  margin-left:20px;
+  color:#EA6E29;
 
 }
 
 .check_info{
-border: medium solid #F8C1B4;
-width:650px;
-margin-left:20px;
-margin-top: 20px;
- border-radius: 10px;
+  border: medium solid #F8C1B4;
+  width:650px;
+  margin-left:20px;
+  margin-top: 20px;
+  border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px; 
   background-color:#FCECE3;
+}
 
+.field_with_errors{
+  display: inline;
+}
+.flash {
+  color: white;
+  text-align: center;
+
+  font-size:20px;
+
+
+  &__alert{
+    background-color: red;
+  }
+  &__notice {
+    background-color: blue;
+  }
 }

@@ -13,6 +13,9 @@ def create
   @theme = Theme.new(theme_params)
   if @theme.save
 redirect_to root_path
+else
+   flash.now[:alert] = "利用規約の確認をしてチェックをしてください"
+      render :new
   end
 end
 
