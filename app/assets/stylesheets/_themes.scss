@@ -53,8 +53,6 @@
   margin-top:20px;
 }
 
-
-
 .red{
   border-bottom: 3px solid #F4C536;
   width:600px;
@@ -285,3 +283,35 @@ text-align:center;
   text-align:center;
 }
 
+.check{
+  font-weight:bold;
+
+text-align:center;
+}
+
+.checks{
+  float:left;
+  margin-top:20px;
+  margin-left:100px;
+}
+
+.check_infos{
+  font-weight:bold;
+    margin-top:10px ;
+    margin-bottom: 10px;
+margin-left:20px;
+color:#EA6E29;
+
+}
+
+.check_info{
+border: medium solid #F8C1B4;
+width:650px;
+margin-left:20px;
+margin-top: 20px;
+ border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
+  background-color:#FCECE3;
+
+}

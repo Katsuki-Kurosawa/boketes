@@ -50,32 +50,46 @@
             });
           </script>
 
-          <%= f.label :image  do%>
-          <div class="image_toukou_btn2"><p class="image_toukou_btn_in">1.ファイルを選択</p></div>
-          <%= f.file_field :image, style: "display:none;" ,class:"a" %>
-          <% end %>
+          <div class=" check_info" >    
+            <p class="check_infos">著作権・肖像権の侵害に当たる画像や暴力的、卑猥な画像の投稿は禁止しております。
+            <br>投稿をしたい画像は投稿して問題がないか今一度考えて投稿しましょう。</p>
+            </div>
 
-          <input type="submit" name="image" value="2.ファイルをアップロード" class="image_toukou_btn3" >
-        </label>
+            　
+            <p class="check">  <%= f.check_box :agreement, :as => :boolean, checked:false ,class:"checkbox"%>
+              <span> 上記の規約に同意して投稿します。</span></p>
 
-        <% end %>
+
+
+              <%= f.label :image  do%>
+              <div class="image_toukou_btn2"><p class="image_toukou_btn_in">1.ファイルを選択</p></div>
+              <%= f.file_field :image, style: "display:none;" ,class:"a" %>
+              <% end %>
+
+
+              <input type="submit" name="image" value="2.ファイルをアップロード" class="image_toukou_btn3" >
+            </label>
+
+
+
+
+            <% end %>
+          </div>
+        </div>
 
       </div>
+
+      <%= link_to root_path do %>
+      <%= image_tag "gazou.png", class: "new_gazous" %>
+      <% end %>
+
+      <%= link_to root_path do %>
+      <%= image_tag "gazou2.png", class: "new_gazouss" %>
+      <% end %>
+
+
     </div>
-
+    <footer>
+      <p class="footer">Copyright(C) boketemasun.</p>
+    </footer>
   </div>
-
-  <%= link_to root_path do %>
-  <%= image_tag "gazou.png", class: "new_gazous" %>
-  <% end %>
-
-  <%= link_to root_path do %>
-  <%= image_tag "gazou2.png", class: "new_gazouss" %>
-  <% end %>
-
-
-</div>
-<footer>
-  <p class="footer">Copyright(C) boketemasun.</p>
-</footer>
-</div>
