@@ -25,11 +25,17 @@
 
         <div class="reds">
           <p class="red">注目のボケ</p>
-          <%= link_to root_path do %>
-          <%= image_tag "red.jpg", class: "gazou" %>
-          <% end %>
-          <p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
-          
+       <% @answers.each do |i|%>
+          <% if i.theme.image? %>
+
+          <div class="root_toukou_image_set"><%= image_tag  i.theme.image, class: "root_toukou_image" %>
+
+            <p class="root_answer_toukou_user">ボケ投稿者:<%= i.user.name %>っち|お題投稿者:<%= i.theme.user.name%>っち</p>
+            <div class="root_answer_toukou_boke"><%= i.answer %></div></div>
+
+            <%end%>
+
+            <%end%>
         </div>
 
         <div class="reds">

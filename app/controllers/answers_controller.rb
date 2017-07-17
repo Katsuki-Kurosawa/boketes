@@ -2,6 +2,7 @@ class AnswersController < ApplicationController
 
   def index
     @answer = Answer.all.order("created_at  DESC").limit(20)
+    
   end
 
   def new
