@@ -20,7 +20,7 @@ end
 private
 
 def theme_params
-params.require(:theme).permit(:image, :title).merge(user_id: current_user.id)
+params.require(:theme).permit(:image, :title, :agreement).merge(user_id: current_user.id)
 end
 
 
