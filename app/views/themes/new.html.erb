@@ -1,4 +1,6 @@
 <div class="body">
+      
+
   <div class="content">
     <div class="nav_bar">
       <ul class="nav_bars">
@@ -17,10 +19,18 @@
       <div class="kara">
       </div>
       <div clss="content3">
-      
- <div class="pp"> <% flash.each do |key, value| %>
- <%= content_tag(:div, value,  class: "flash flash__#{key}") %>
-<% end %></div>
+
+
+            <% if @theme.errors.any? %>
+  <div class="error_explanation">
+    <h2><%= @theme.errors.count %>件のエラーがあります。</h2>
+
+    <ul>
+    <p class="error">投稿をしたい画像は投稿して問題がないか確認の上、チェックボタンにチェックしてください。</p>
+    </ul>
+  </div>
+<% end %>
+
 
 
         <p class="red">手持ちの写真からお題を投稿する</p>
@@ -78,10 +88,9 @@
               <input type="submit" name="image" value="2.ファイルをアップロード" class="image_toukou_btn3" >
             </label>
 
-
-
-
             <% end %>
+
+
 
           </div>
         </div>

@@ -323,17 +323,17 @@ positon:relative;
 .field_with_errors{
   display: inline;
 }
-.flash {
-  color: white;
-  text-align: center;
 
-  font-size:20px;
-
-
-  &__alert{
-    background-color: red;
-  }
-  &__notice {
-    background-color: blue;
-  }
+.error_explanation{
+      padding: 0.5em 1em;
+   margin:10px 10px;
+    color: #ff7d6e;
+    background: #ffebe9;
+    border-top: solid 10px #ff7d6e;
+      -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
+  background-color:#FCECE3;
+  font-weight:bold;
+  font-size:15px;
+  height:70px;
 }

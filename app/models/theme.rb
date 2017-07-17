@@ -1,5 +1,5 @@
 class Theme < ApplicationRecord
- validates_acceptance_of :agreement, allow_nil: false
+ validates_acceptance_of :agreement,  presence: true
   mount_uploader :image, ImageUploader
   belongs_to :user
   has_many   :answers
