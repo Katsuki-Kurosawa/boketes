@@ -182,3 +182,60 @@
 }
 
 
+
+.bads{
+  font-size:15px;
+  font-weight: bold;
+  padding:10px 20px;
+  margin-left:260px;
+  margin-top:30px;
+  background-color: #248;
+  color: #fff;
+  border-style: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px; 
+}
+
+.bads_count{
+  font-size:25px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.bads_box{
+  border: 2px solid #248;
+  border-radius: 4px;
+  width:160px;
+  padding: 1em;
+  position: relative;
+  margin-left:430px;
+  margin-top:-55px;
+  margin-bottom:40px;
+}
+
+.bads_box::before {
+  background-color: #fff;
+  color: #248;
+  content: "なんでやねん!! total";
+  font-weight: bold;
+  left: 1em;
+  padding: 0 .5em;
+  position: absolute;
+  top: -1em;
+}
+
+.bad{
+  font-size:15px;
+  font-weight: bold;
+  padding:10px 20px;
+  margin-left:200px;
+  margin-top:30px;
+  background-color: #EC1624;
+  color: #fff;
+  border-style: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px; 
+}
+

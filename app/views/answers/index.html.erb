@@ -1,47 +1,33 @@
 <div class="body">
   <div class="content">
     <div class="nav_bar">
-<ul class="nav_bars">
-  <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
-   <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
-    <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
-
-<li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
-</ul>
+      <ul class="nav_bars">
+        <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>a
+        <li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
+      </ul>
     </div>
     <div class="new_content">
-
-<p class="red">新着のボケ</p>
-
-<% @answer.each do |i|%>
-<% if i.theme.image? %>
-
-  <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
-
-<p class="answer_toukou_user">ボケ投稿者:<%= i.user.name %>っち|お題投稿者:<%= i.theme.user.name%>っち</p>
-<p class="answer_toukou_boke"><%= i.answer %></p>
-<p class="answer_toukou_user_border"></p>
-
-<%end%>
-
-<%end%>
-
-
-
-
+      <p class="red">新着のボケ</p>
+      <% @answer.each do |i|%>
+      <% if i.theme.image? %>
+      <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
+      <p class="answer_toukou_user">ボケ投稿者:<%= i.user.name %>っち|お題投稿者:<%= i.theme.user.name%>っち</p>
+      <p class="answer_toukou_boke"><%= i.answer %>
+      <span> <%= render :partial => "bad" , locals: { answer: i , bad:@bad }%></span></p>
+       <p class="answer_toukou_user_border"></p>
+      <%end%>
+      <%end%>
     </div>
-
     <%= link_to root_path do %>
     <%= image_tag "gazou.png", class: "new_gazous" %>
     <% end %>
-
     <%= link_to root_path do %>
     <%= image_tag "gazou2.png", class: "new_gazouss" %>
     <% end %>
-
-
   </div>
   <footer>
     <p class="footer">Copyright(C) boketemasun.</p>

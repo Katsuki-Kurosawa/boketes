@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+<% if answer.bad_user(current_user.id) %>
+<%= button_to answer_bad_path(bad, answer_id: answer.id), method: :delete, id: "like-button", remote: true , class: "bad" do %>
+<p>なんでやねん!!  取り消し</p>
+<% end %>
+<% else %>
+<%= button_to answer_bads_path(answer), id: "like-button", remote: true , class: "bads" do %>
+<p> なんでやねん!!</p>
+<% end %>
+<% end %>
+<% end %>
+<div class="bads_box">
+<% if answer.bads_count == nil %>
+<p class="bads_count">  <%= 0  %></p>
+<% else %>
+<p class="bads_count">  <%= answer.bads_count %></p>
+<% end %>
+</div>
