@@ -189,7 +189,7 @@
   padding:10px 20px;
   margin-left:260px;
   margin-top:30px;
-  background-color: #248;
+  background-color: #dc143c;
   color: #fff;
   border-style: none;
   border-radius: 3px;
@@ -201,10 +201,11 @@
   font-size:25px;
   text-align:center;
   font-weight:bold;
+
 }
 
 .bads_box{
-  border: 2px solid #248;
+  border: 2px solid #dc143c;
   border-radius: 4px;
   width:160px;
   padding: 1em;
@@ -216,7 +217,7 @@
 
 .bads_box::before {
   background-color: #fff;
-  color: #248;
+  color: #dc143c;
   content: "なんでやねん!! total";
   font-weight: bold;
   left: 1em;
@@ -231,7 +232,7 @@
   padding:10px 20px;
   margin-left:200px;
   margin-top:30px;
-  background-color: #EC1624;
+  background-color: #6291D3;
   color: #fff;
   border-style: none;
   border-radius: 3px;
