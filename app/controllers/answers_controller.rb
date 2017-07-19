@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
 
+
+
   def index
     @answer = Answer.all.order("created_at  DESC").limit(20)
     @bad = current_user.bads
@@ -16,6 +18,7 @@ class AnswersController < ApplicationController
     redirect_to root_path
   end
 end
+
 
 private
 
