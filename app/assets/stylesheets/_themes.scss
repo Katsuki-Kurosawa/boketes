@@ -77,18 +77,6 @@
 }
 
 
-.gazous{
-  width:250px;
-  float:right;
-  margin-right:20px;
-  margin-top:-1200px;
-}
-
-.gazouss{
-  width:270px;
-  float:right;
-  margin-top:-650px;
-}
 
 .footer{
  text-align: center;
@@ -115,16 +103,17 @@
 }
 
 .new_gazous{
-  width:250px;
+ width:250px;
   float:right;
-  margin-right:20px;
-  margin-top:-1050px;
+  margin-right:60px;
+  margin-top:-1000px;
 }
 
 .new_gazouss{
-  width:270px;
+  width:250px;
   float:right;
-  margin-top:-500px;
+  margin-right:60px;
+  margin-top:-1000px;
 }
 
 
@@ -337,3 +326,45 @@ positon:relative;
   font-size:15px;
   height:70px;
 }
+
+.gazous{
+  width:250px;
+  float:right;
+  margin-right:60px;
+  margin-top:-1000px;
+}
+
+.gazouss{
+  width:270px;
+  float:right;
+  margin-top:-480px;
+  margin-right:40px;
+
+}
+
+.rank {
+ float:right;
+ margin-top:-1200px;
+ width:280px;
+ background-color:white;
+ border: 6px solid #F4C536;
+ border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
+ margin-right:15px;
+ padding: 2em;
+ font-weight:bold;
+}
+
+.rank h1{
+   font-weight:bold;
+   font-size:16px;
+}
+.rank span{
+  font-size:10px;
+}
+
+.rank h2{
+  color:red;
+   font-weight:bold;
+}
+
+

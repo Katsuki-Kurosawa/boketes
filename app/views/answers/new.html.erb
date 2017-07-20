@@ -1,15 +1,15 @@
 <div class="body">
   <div class="content">
     <div class="nav_bar">
-<ul class="nav_bars">
-  <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
-   <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
-    <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
-  <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
+      <ul class="nav_bars">
+        <li class="nav_bars1"><%=link_to'トップ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
+        <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
 
-<li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
-</ul>
+        <li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
+      </ul>
     </div>
     <div class="new_answer_content">
       <div class="popular">
@@ -23,29 +23,38 @@
         <div class="reds">
 
          <P class="boke_gazou_center"> <%= image_tag @theme.image, class: "boke_gazou" %></P>
-          <%= form_for [@theme, @answer] do |f|  %>
-          <%= f.text_field :answer ,name:"answer" ,  value:"" ,class:"text" %>
-          <%= f.submit value:"投稿する" , class:"btn" %>
-          <% end %>
+         <%= form_for [@theme, @answer] do |f|  %>
+         <%= f.text_field :answer ,name:"answer" ,  value:"" ,class:"text" %>
+         <%= f.submit value:"投稿する" , class:"btn" %>
+         <% end %>
 
 
 
-        </div>
-      </div>
+       </div>
+     </div>
 
-    </div>
+   </div>
 
-    <%= link_to root_path do %>
-    <%= image_tag "gazou.png", class: "new_gazous" %>
-    <% end %>
-
-    <%= link_to root_path do %>
-    <%= image_tag "gazou2.png", class: "new_gazouss" %>
-    <% end %>
-
-
+   <div class="new_rank">
+    <h1>'なんでやねん！！'ユーザーランキング</h1>
+    <h2>※要注意ユーザー</h2>
+    <% @bad_count.each.with_index do |bad, i| %>
+    <%= i +1 %>位
+    <%=  User.find(bad[0]).name%>
+    <%= bad[1] %> <span>なんでやねん!!</span><br>
+    <% end%>
   </div>
-  <footer>
-    <p class="footer">Copyright(C) boketemasun.</p>
-  </footer>
+  <%= link_to root_path do %>
+  <%= image_tag "gazou.png", class: "new_gazous" %>
+  <% end %>
+
+  <%= link_to root_path do %>
+  <%= image_tag "gazou2.png", class: "new_gazouss" %>
+  <% end %>
+
+
+</div>
+<footer>
+  <p class="footer">Copyright(C) boketemasun.</p>
+</footer>
 </div>

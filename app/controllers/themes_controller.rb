@@ -3,10 +3,13 @@ class ThemesController < ApplicationController
   def index
     @theme = Theme.all.order("created_at DESC").limit(20)
     @themes = @theme_id
+    @bad_count = Answer.group(:user_id).order('sum_bads_count DESC').limit(3).sum(:bads_count)
   end
 
   def new
     @theme = Theme.new
+     @bad_count = Answer.group(:user_id).order('sum_bads_count DESC').limit(3).sum(:bads_count)
+
   end
 
   def create

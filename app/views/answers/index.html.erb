@@ -6,7 +6,7 @@
         <li class="nav_bars1"><%=link_to'注目' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
-        <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>a
+        <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
       </ul>
     </div>
@@ -22,12 +22,25 @@
       <%end%>
       <%end%>
     </div>
-    <%= link_to root_path do %>
-    <%= image_tag "gazou.png", class: "new_gazous" %>
-    <% end %>
-    <%= link_to root_path do %>
-    <%= image_tag "gazou2.png", class: "new_gazouss" %>
-    <% end %>
+    <div class="new_rank">
+      <h1>'なんでやねん！！'ユーザーランキング</h1>
+      <h2>※要注意ユーザー</h2>
+      <% @bad_count.each.with_index do |bad, i| %>
+      <%= i +1 %>位
+      <%=  User.find(bad[0]).name%>
+      <%= bad[1] %> <span>なんでやねん!!</span><br>
+      <% end%>
+    </div>
+
+         <%= link_to root_path do %>
+        <%= image_tag "gazou.png", class: "new_gazous" %>
+        <% end %>
+
+
+        <%= link_to root_path do %>
+        <%= image_tag "gazou2.png", class: "new_gazouss" %>
+        <% end %>
+      </div>
 
   </div>
   <footer>
