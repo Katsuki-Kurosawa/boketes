@@ -17,33 +17,34 @@
       <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
       <p class="answer_toukou_user">ボケ投稿者:<%= i.user.name %>っち|お題投稿者:<%= i.theme.user.name%>っち</p>
       <p class="answer_toukou_boke"><%= i.answer %>
-      <span> <%= render :partial => "bad" , locals: { answer: i , bad:@bad }%></span></p>
-       <p class="answer_toukou_user_border"></p>
-      <%end%>
-      <%end%>
-    </div>
-    <div class="new_rank">
-      <h1>'なんでやねん！！'ユーザーランキング</h1>
-      <h2>※要注意ユーザー</h2>
-      <% @bad_count.each.with_index do |bad, i| %>
-      <%= i +1 %>位
-      <%=  User.find(bad[0]).name%> <span>容疑者</span>
-      <%= bad[1] %> <span>なんでやねん!!</span><br>
-      <% end%>
-    </div>
-
-         <%= link_to root_path do %>
-        <%= image_tag "gazou.png", class: "new_gazous" %>
-        <% end %>
-
-
-        <%= link_to root_path do %>
-        <%= image_tag "gazou2.png", class: "new_gazouss" %>
-        <% end %>
+        <span> <%= render :partial => "bad" , locals: { answer: i , bad:@bad }%></span></p>
+        <p class="answer_toukou_user_border"></p>
+        <%end%>
+        <%end%>
+      </div>
+      <div class="new_rank">
+        <h1>'なんでやねん！！'ユーザーランキング</h1>
+        <h2>※要注意ユーザー</h2>
+        <% @bad_count.each.with_index do |bad, i| %>
+        <%= i +1 %>位
+        <%=  User.find(bad[0]).name%> <span>容疑者</span>
+        <%= bad[1] %> <span>なんでやねん!!</span><br>
+        <% end%>
       </div>
 
-  </div>
-  <footer>
+      <%= link_to root_path do %>
+      <%= image_tag "gazou.png", class: "new_gazous" %>
+      <% end %>
+
+
+      <%= link_to root_path do %>
+      <%= image_tag "gazou2.png", class: "new_gazouss" %>
+      <% end %>
+    </div>
+     <footer>
     <p class="footer">Copyright(C) boketemasun.</p>
   </footer>
+
+  </div>
+
 </div>

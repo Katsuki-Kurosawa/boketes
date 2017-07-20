@@ -37,6 +37,16 @@
 
     </div>
 
+        <div class="new_rank">
+        <h1>'なんでやねん！！'ユーザーランキング</h1>
+        <h2>※要注意ユーザー</h2>
+        <% @bad_count.each.with_index do |bad, i| %>
+        <%= i +1 %>位
+        <%=  User.find(bad[0]).name%> <span>容疑者</span>
+        <%= bad[1] %> <span>なんでやねん!!</span><br>
+        <% end%>
+      </div>
+
     <%= link_to root_path do %>
     <%= image_tag "gazou.png", class: "new_gazous" %>
     <% end %>
