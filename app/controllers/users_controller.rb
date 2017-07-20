@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   @user = current_user
   @theme = @user.themes.all.order("created_at   DESC").limit(3)
   @answer = @user.answers.all.order("created_at   DESC").limit(3)
+  @bad_count = Answer.group(:user_id).order('sum_bads_count DESC').limit(3).sum(:bads_count)
 end
 
 end
