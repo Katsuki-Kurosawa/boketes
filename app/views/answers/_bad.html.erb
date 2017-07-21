@@ -2,13 +2,13 @@
 <% if answer.bad_user(current_user.id) %>
 <div>
 <%= button_to answer_bad_path(bad, answer_id: answer.id), method: :delete, id: "like-button", remote: true , class: "bad" do %>
-<p class="aaa">なんでやねん!!  取り消し</p>
+<p class="aaa">なんでやねん!!  取り消し<span><i class="fa fa-thumbs-o-down fa-bad"></i></span></p>
 <% end %>
 </div>
 <% else %>
 <div>
 <%= button_to answer_bads_path(answer), id: "like-button", remote: true , class: "bads"  do %>
-<p> なんでやねん!!</p>
+<p> なんでやねん!!<span><i class="fa fa-thumbs-o-down fa-bad"></i></span></p>
 <% end %>
 </div>
 <% end %>

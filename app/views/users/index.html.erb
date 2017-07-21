@@ -59,8 +59,8 @@
         </div>
        
    <div class="rank">
-      <h1>'なんでやねん！！'ユーザーランキング</h1>
-      <h2>※要注意ユーザー</h2>
+      <h1>なんでやねん！！ ユーザーランキング</h1>
+     <h2> <i class="fa fa-check-circle-o" aria-hidden="true"></i>要注意ユーザー<span><i class="fa fa-thumbs-o-down""></i></span></h2>
       <% @bad_count.each.with_index do |bad, i| %>
       <%= i +1 %>位
       <%=  User.find(bad[0]).name%> <span>容疑者</span>

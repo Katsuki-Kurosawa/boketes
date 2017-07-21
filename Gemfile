@@ -66,6 +66,6 @@ group :development, :test do
 end
 
   gem 'devise'
-  gem "carrierwave"
+  gem 'carrierwave'
   gem 'pry-rails'
-
+  gem 'font-awesome-rails'
