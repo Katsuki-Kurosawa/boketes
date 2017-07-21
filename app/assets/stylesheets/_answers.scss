@@ -175,7 +175,7 @@
   padding:10px 20px;
   margin-left:200px;
   margin-top:30px;
-  background-color: #dc143c;
+  background-color: red;
   color: #fff;
   border-style: none;
   border-radius: 3px;
@@ -191,7 +191,7 @@
 }
 
 .bads_box{
-  border: 2px solid #dc143c;
+  border: 2px solid red;
   border-radius: 4px;
   width:160px;
   padding: 1em;
@@ -203,7 +203,7 @@
 
 .bads_box::before {
   background-color: #fff;
-  color: #dc143c;
+  color: red;
   content: "なんでやねん!! total";
   font-weight: bold;
   left: 1em;
