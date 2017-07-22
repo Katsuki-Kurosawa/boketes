@@ -8,7 +8,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= favicon_link_tag "fa.png" %>
 
-  </head>
+</head>
 
 <header class="header">
   <%= link_to root_path do %>
@@ -31,7 +31,7 @@
       <li class="nav__user_image">
         <%= image_tag "user.png", class: "user_image" %></li>
         <li class="nav__user">
-          <%=link_to current_user.name , new_user_registration_path,class:"navz"%></li>
+          <%=link_to current_user.name ,"/users/#{current_user.id}",class:"navz"%></li>
           <li class="nav__user"><%=link_to'マイページ' ,"/users/#{current_user.id}",class:"navz"%></li>
           <% end%>
 

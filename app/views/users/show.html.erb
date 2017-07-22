@@ -31,11 +31,11 @@
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info2"><i class="fa fa-heart" aria-hidden="true"></i> 生年月日 <p class="show_user_info_sub">1900/1/1</p>
+        <div class="show_user_info2"><i class="fa fa-heart" aria-hidden="true"></i> 生年月日（西暦） <p class="show_user_info_sub"><%= @user.year%>年<%= @user.month%>月<%= @user.day%>日</p>
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info3"><i class="fa fa-user-circle" aria-hidden="true"></i> 性別 <p class="show_user_info_sub">男</p>
+        <div class="show_user_info3"><i class="fa fa-user-circle" aria-hidden="true"></i> 性別 <p class="show_user_info_sub"><%= @user.sex%> </p>
         </div>
         <p class="show_line"></p>
 
@@ -49,7 +49,7 @@
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info6"><i class="fa fa-pencil" aria-hidden="true"></i> プロフィール<p class="show_user_info_sub">hello</p>
+        <div class="show_user_info6"><i class="fa fa-pencil" aria-hidden="true"></i> プロフィール<p class="show_user_info_sub"><%= @user.text%></p>
         </div>
         <p class="show_line"></p>
 
