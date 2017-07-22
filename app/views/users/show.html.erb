@@ -26,30 +26,30 @@
         </div>
 
 
-        <div class="show_user_info1"> ボケてID
+        <div class="show_user_info1"><i class="fa fa-check" aria-hidden="true"></i> ボケてID
           <p class="show_user_info_sub"><%= @user.id%></p>
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info2">生年月日 <p class="show_user_info_sub">1900/1/1</p>
+        <div class="show_user_info2"><i class="fa fa-heart" aria-hidden="true"></i> 生年月日 <p class="show_user_info_sub">1900/1/1</p>
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info3">性別<p class="show_user_info_sub">男</p>
+        <div class="show_user_info3"><i class="fa fa-user-circle" aria-hidden="true"></i> 性別 <p class="show_user_info_sub">男</p>
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info4">ボケ投稿数
+        <div class="show_user_info4"><i class="fa fa-comment" aria-hidden="true"></i> ボケ投稿数
           <p class="show_user_info_sub"><%= @answer.length%> </p>
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info5">お題投稿数
+        <div class="show_user_info5"><i class="fa fa-picture-o" aria-hidden="true"></i> お題投稿数
           <p class="show_user_info_sub"><%= @theme.length%> </p>
         </div>
         <p class="show_line"></p>
 
-        <div class="show_user_info6">プロフィール<p class="show_user_info_sub">hello</p>
+        <div class="show_user_info6"><i class="fa fa-pencil" aria-hidden="true"></i> プロフィール<p class="show_user_info_sub">hello</p>
         </div>
         <p class="show_line"></p>
 
@@ -83,16 +83,15 @@
 
      </div>
 
-  <div class="rank">
-      <h1>'なんでやねん！！'ユーザーランキング</h1>
-      <h2>※要注意ユーザー</h2>
+   <div class="rank">
+      <h1>なんでやねん！！ ユーザーランキング</h1>
+     <h2> <i class="fa fa-check-circle-o" aria-hidden="true"></i>要注意ユーザー<span><i class="fa fa-thumbs-o-down""></i></span></h2>
       <% @bad_count.each.with_index do |bad, i| %>
       <%= i +1 %>位
       <%=  User.find(bad[0]).name%> <span>容疑者</span>
       <%= bad[1] %> <span>なんでやねん!!</span><br>
       <% end%>
     </div>
-
 
 
 

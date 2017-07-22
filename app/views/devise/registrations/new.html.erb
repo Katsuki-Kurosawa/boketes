@@ -48,6 +48,11 @@
               <%= f.password_field :password_confirmation, autocomplete: "off",class:"user_set_text" %>
             </div>
 
+             <div class="field">
+              <%= f.label :性別 ,class:"user_set"%> <em>(6文字以内でお願いします。)</em><br />
+              <%= f.text_field :sex, autofocus: true, maxlength: "6" ,class:"user_set_text"%>
+            </div>
+
             <div>
               <%= f.submit "新規登録", class:"user_set_btn" %>
             </div>
