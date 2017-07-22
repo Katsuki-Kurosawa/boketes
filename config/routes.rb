@@ -6,6 +6,6 @@ Rails.application.routes.draw do
    resources :answers, only: [:new, :create] end
    resources :answers, only: [:index] do
     resources :bads, only: [:create, :destroy] end
-    resources :users, only: [:index, :show, :edit, :update]
+    resources :users, only: [:index, :show]
     resources :photo, only: [:index]
   end
