@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170722052641) do
+ActiveRecord::Schema.define(version: 20170722161721) do
 
   create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "answer",     limit: 65535
     t.integer  "theme_id"
     t.integer  "user_id"
+    t.integer  "bads_count"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.integer  "bads_count"
   end
 
   create_table "bads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
