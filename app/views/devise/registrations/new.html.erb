@@ -53,6 +53,11 @@
               <%= f.text_field :sex, autofocus: true, maxlength: "6" ,class:"user_set_text"%>
             </div>
 
+             <div class="field">
+              <%= f.label :プロフィール ,class:"user_set"%> <em>(10文字以内でお願いします。)</em><br />
+              <%= f.text_field :text, autofocus: true, maxlength: "10" ,class:"user_set_text"%>
+            </div>
+
             <div>
               <%= f.submit "新規登録", class:"user_set_btn" %>
             </div>
