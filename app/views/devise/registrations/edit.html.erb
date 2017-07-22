@@ -1,43 +1,81 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="body">
+  <div class="content">
+    <div class="nav_bar">
+      <ul class="nav_bars">
+      </div>
+      <div class="content_sign_up">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+        <div class="popular">
+        </div>
+        <div class="kara">
+        </div>
+        <div clss="content3">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+
+         <p class="red">ボケてアカウント修正</p>
+         <br/>
+
+
+         <div class="edit_content_sign_ups">
+
+           <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+           <%= devise_error_messages! %>
+
+           <div class="field">
+             <br />
+             <%= f.label :名前 ,class:"user_set"%><br />
+             <%= f.text_field :name, autofocus: true, class:"user_set_text" %>
+           </div>
+
+           <div class="field">
+            <%= f.label :メールアドレス ,class:"user_set"%><br />
+            <%= f.email_field :email, autofocus: true ,class:"user_set_text"%>
+          </div>
+
+          <div class="field">
+            <%= f.label :性別 ,class:"user_set"%><br />
+            <label><%= f.radio_button :sex, "男" ,class: "sex_box" %>男</label>
+            <label><%= f.radio_button :sex, "女" ,class: "sex_boxs" %>女</label>
+            <label><%= f.radio_button :sex, "オカマ" ,class: "no_sex_box" %>オカマ</label>
+          </div>
+
+           <div class="field">
+              <%= f.label :生年月日（西暦） ,class:"user_set"%><br />
+              <%= f.text_field :year, autofocus: true, maxlength: "4" ,class:"birth_year"%>年
+              <%= f.text_field :month, autofocus: true, maxlength: "4" ,class:"birth_month"%>月
+              <%= f.text_field :day, autofocus: true, maxlength: "4" ,class:"birth_month"%>日
+            </div>
+
+          <div class="field">
+            <%= f.label :プロフィール ,class:"user_set"%><br />
+            <%= f.text_field :text, autofocus: true, class:"user_set_text" %>
+          </div>
+
+
+
+          <div class="field">
+            <%= f.label :修正にはパスワードが必要です ,class:"user_set"%> <br />
+            <%= f.password_field :current_password, autocomplete: "off" ,class:"user_set_text"%>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "ユーザー情報を修正する" ,class:"square_btn" %>
+          </div>
+          <% end %>
+
+          <h3 class="user_delete">アカウント削除</h3>
+
+          <p> <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"square_btn" %></p>
+          <br />
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+  <footer>
+    <p class="footer">Copyright(C) boketemasun.</p>
+  </footer>
+</div>
