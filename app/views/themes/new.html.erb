@@ -37,27 +37,6 @@
           <P class="image_toukou_info"> </P>
           <p class="toukou_preview"> <img id="img_prev"  src="#" > </p>
 
-
-          <script type="text/javascript">
-            $(function() {
-              function readURL(input) {
-                if (input.files && input.files[0]) {
-                  var reader = new FileReader();
-
-                  reader.onload = function (e) {
-                    $('#img_prev').attr('src', e.target.result);
-                  }
-                  reader.readAsDataURL(input.files[0]);
-                }
-              }
-
-              $(".a").change(function(){
-                $('#img_prev').removeClass('hidden');
-                readURL(this);
-              });
-            });
-          </script>
-
           <div class=" check_info" >    
             <p class="check_infos">著作権・肖像権の侵害に当たる画像や暴力的、卑猥な画像の投稿は禁止しております。
               <br>投稿をしたい画像は投稿して問題がないか今一度考えて投稿しましょう。</p>

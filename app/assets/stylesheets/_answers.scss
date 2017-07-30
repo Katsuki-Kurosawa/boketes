@@ -2,6 +2,7 @@
 .body {
   background-image: image-url("aa.png");
   height:1500px;
+  width: calc(107% - 100px);
 }
 
 .content{
@@ -28,7 +29,7 @@
   height:50px;
   background-color:white;
   position: fixed;
-  width:100%;
+  width: calc(1000vh - 100px);
   border-bottom: 3px solid black;
 }
 

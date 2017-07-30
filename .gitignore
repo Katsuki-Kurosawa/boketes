@@ -18,3 +18,6 @@ ublic/uploads/tmp
 # Ignore Byebug command history file.
 .byebug_history
 public
+app/assets/images/star-half.png
+
+*.png

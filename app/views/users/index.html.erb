@@ -21,6 +21,8 @@
           <%= image_tag "red.jpg", class: "gazou" %>
           <% end %>
           <p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
+
+   
         </div>
 
         <div class="reds">
@@ -57,18 +59,18 @@
           </div>
 
         </div>
-       
-   <div class="rank">
-      <h1>なんでやねん！！ ユーザーランキング</h1>
-     <h2> <i class="fa fa-check-circle-o" aria-hidden="true"></i>要注意ユーザー<span><i class="fa fa-thumbs-o-down""></i></span></h2>
-      <% @bad_count.each.with_index do |bad, i| %>
-      <%= i +1 %>位
-      <%=  User.find(bad[0]).name%> <span>容疑者</span>
-      <%= bad[1] %> <span>なんでやねん!!</span><br>
-      <% end%>
-    </div>
 
-         <%= link_to root_path do %>
+        <div class="rank">
+          <h1>なんでやねん！！ ユーザーランキング</h1>
+          <h2> <i class="fa fa-check-circle-o" aria-hidden="true"></i>要注意ユーザー<span><i class="fa fa-thumbs-o-down""></i></span></h2>
+          <% @bad_count.each.with_index do |bad, i| %>
+          <%= i +1 %>位
+          <%=  User.find(bad[0]).name%> <span>容疑者</span>
+          <%= bad[1] %> <span>なんでやねん!!</span><br>
+          <% end%>
+        </div>
+
+        <%= link_to root_path do %>
         <%= image_tag "gazou.png", class: "gazous" %>
         <% end %>
 
