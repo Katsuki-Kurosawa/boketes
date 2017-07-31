@@ -17,12 +17,14 @@
       <div clss="content3">
         <div class="reds">
           <p class="red">人気のボケ</p>
-          <%= link_to root_path do %>
-          <%= image_tag "red.jpg", class: "gazou" %>
+
+          <% @answer_top.each do |i|%>
+          <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
+          <p class="answer_toukou_user">ボケ投稿者:<%= i.user.name %>|お題投稿者:<%= i.theme.user.name%></p>
+          <p class="answer_toukou_boke"><%= i.answer %></p>
+          <div class="p_like"> <%= render :partial => "answers/like" , locals: { answer: i , like:@like }%></div>
+          <div class ="p_bad"><%= render :partial => "answers/bad" , locals: { answer: i , bad:@bad }%></div>
           <% end %>
-          <p class="odai">床に落とした麺をワイルドそうなネーミングを加えて客に出した</p>
-
-
         </div>
 
         <div class="reds">

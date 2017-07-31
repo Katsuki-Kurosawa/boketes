@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :themes
   has_many :answers
   has_many :bads
+  has_many :likes
 end
