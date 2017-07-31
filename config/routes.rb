@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :themes, only: [:index, :new, :create] do
    resources :answers, only: [:new, :create] end
    resources :answers, only: [:index] do
-    resources :bads, only: [:create, :destroy] end
+    resources :bads, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy] end
     resources :users, only: [:index, :show, :edit, :update]
     resources :photo, only: [:index]
   end
+

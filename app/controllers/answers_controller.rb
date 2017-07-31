@@ -6,6 +6,7 @@ class AnswersController < ApplicationController
     @answer = Answer.all.order("created_at  DESC").limit(20)
     @bad = current_user.bads
     @bad_count = Answer.group(:user_id).order('sum_bads_count DESC').limit(3).sum(:bads_count)
+    @like = Like.all
   end
 
   def new

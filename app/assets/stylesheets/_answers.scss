@@ -171,11 +171,10 @@
 
 
 .bads{
-  font-size:15px;
+  font-size:12px;
   font-weight: bold;
   padding:10px 20px;
-  margin-left:175px;
-  margin-top:30px;
+  margin-left:380px;
   background-color: red;
   color: #fff;
   border-style: none;
@@ -185,7 +184,7 @@
 }
 
 .bads_count{
-  font-size:25px;
+  font-size:20px;
   text-align:center;
   font-weight:bold;
 
@@ -194,10 +193,10 @@
 .bads_box{
   border: 2px solid red;
   border-radius: 4px;
-  width:160px;
+  width:110px;
   padding: 1em;
   position: relative;
-  margin-left:360px;
+  margin-left:530px;
   margin-top:-55px;
   margin-bottom:40px;
 }
@@ -207,19 +206,19 @@
   color: red;
   content: "なんでやねん!! total";
   font-weight: bold;
-  left: 1em;
+  left: 0 .5em;
   padding: 0 .5em;
   position: absolute;
   top: -1em;
+  font-size:12px;
 }
 
 .bad{
-  font-size:15px;
+  font-size:10px;
   font-weight: bold;
   padding:10px 20px;
-  margin-left:120px;
-  margin-top:30px;
-  background-color: #6291D3;
+  margin-left:355px;
+  background-color: #F4C536;
   color: #fff;
   border-style: none;
   border-radius: 3px;
@@ -276,3 +275,73 @@
   margin-left:3px;
 }
 
+.likes{
+  font-size:12px;
+  font-weight: bold;
+  padding:10px 20px;
+  margin-left:75px;
+  margin-top:30px;
+  background-color: #6291D3;
+  color: #fff;
+  border-style: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px; 
+
+}
+
+.likes_count{
+  font-size:20px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.likes_box{
+  border: 2px solid #6291D3;
+  border-radius: 4px;
+  width:110px;
+  padding: 1em;
+  position: relative;
+  margin-left:200px;
+  margin-top:-55px;
+  margin-bottom:40px;
+}
+
+.likes_box::before {
+  background-color: #fff;
+  color: #6291D3;
+  content: "おもろい!! total";
+  font-weight: bold;
+  left: 0 .5em;
+  padding: 0 .5em;
+  position: absolute;
+  top: -1em;
+  font-size:12px;
+  
+}
+
+.like{
+  font-size:10px;
+  font-weight: bold;
+  padding:10px 20px;
+  margin-left:40px;
+  margin-top:30px;
+  background-color: #F4C536;
+  color: #fff;
+  border-style: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px; 
+}
+
+.p_like{
+}
+
+.p_bad{
+margin-top:-93px;
+}
+
+.fa-hand-peace-o{
+  font-size:20px;
+  margin-left:3px;
+}
