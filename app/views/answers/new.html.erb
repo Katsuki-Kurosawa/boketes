@@ -7,7 +7,6 @@
         <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
-
         <li class="nav_bars1"><%=link_to'お題投稿' ,photo_index_path,class:"navz"%></li>
       </ul>
     </div>
@@ -17,24 +16,16 @@
       <div class="kara">
       </div>
       <div clss="content3">
-
-
         <p class="red">このお題でボケる</p>
         <div class="reds">
-
          <P class="boke_gazou_center"> <%= image_tag @theme.image, class: "boke_gazou" %></P>
          <%= form_for [@theme, @answer] do |f|  %>
          <%= f.text_field :answer ,name:"answer" ,  value:"" ,class:"text" %>
          <%= f.submit value:"投稿する" , class:"btn" %>
          <% end %>
-
-
-
        </div>
      </div>
-
    </div>
-
    <div class="new_rank">
     <h1>なんでやねん！！ ユーザーランキング</h1>
     <h2> <i class="fa fa-check-circle-o" aria-hidden="true"></i>要注意ユーザー<span><i class="fa fa-thumbs-o-down""></i></span></h2>
@@ -47,12 +38,9 @@
   <%= link_to root_path do %>
   <%= image_tag "gazou.png", class: "new_gazous" %>
   <% end %>
-
   <%= link_to root_path do %>
   <%= image_tag "gazou2.png", class: "new_gazouss" %>
   <% end %>
-
-
 </div>
 <footer>
   <p class="footer">Copyright(C) boketemasun.</p>

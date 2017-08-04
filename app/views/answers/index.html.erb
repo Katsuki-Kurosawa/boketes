@@ -17,7 +17,6 @@
       <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
       <p class="answer_toukou_user">ボケ投稿者:<%= i.user.name %>|お題投稿者:<%= i.theme.user.name%></p>
       <p class="answer_toukou_boke"><%= i.answer %></p>
-
       <div class="p_like"> <%= render :partial => "like" , locals: { answer: i , like:@like }%></div>
       <div class ="p_bad"><%= render :partial => "bad" , locals: { answer: i , bad:@bad }%></div>
       <p class="answer_toukou_user_border">
@@ -33,12 +32,9 @@
         <%= bad[1] %> <span>なんでやねん!!</span><br>
         <% end%>
       </div>
-
       <%= link_to root_path do %>
       <%= image_tag "gazou.png", class: "new_gazous" %>
       <% end %>
-
-
       <%= link_to root_path do %>
       <%= image_tag "gazou2.png", class: "new_gazouss" %>
       <% end %>
@@ -46,7 +42,5 @@
     <footer>
       <p class="footer">Copyright(C) boketemasun.</p>
     </footer>
-
   </div>
-
 </div>

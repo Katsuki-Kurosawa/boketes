@@ -7,7 +7,6 @@
         <li class="nav_bars1"><%=link_to'人気' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'コラボ' ,root_path,class:"navz"%></li>
         <li class="nav_bars1"><%=link_to'セレクト' ,root_path,class:"navz"%></li>
-
         <li class="nav_bars1"><%=link_to'殿堂入り' ,root_path,class:"navz"%></li>
       </ul>
     </div>
@@ -17,7 +16,6 @@
       <div clss="content3">
         <div class="reds">
           <p class="red">人気のボケ</p>
-
           <% @answer_top.each do |i|%>
           <p class="toukou_image_set"><%= image_tag  i.theme.image, class: "toukou_image" %></p>
           <p class="answer_toukou_user">ボケ投稿者:<%= i.user.name %>|お題投稿者:<%= i.theme.user.name%></p>
@@ -26,42 +24,28 @@
           <div class ="p_bad"><%= render :partial => "answers/bad" , locals: { answer: i , bad:@bad }%></div>
           <% end %>
         </div>
-
         <div class="reds">
           <p class="red">注目のボケ</p>
           <% @answers.each do |i|%>
           <% if i.theme.image? %>
-
           <div class="root_toukou_image_set"><%= image_tag  i.theme.image, class: "root_toukou_image" %>
-
             <p class="root_answer_toukou_user"><i class="fa fa-user-circle-o" aria-hidden="true"></i>ボケ:<%= i.user.name %>|<i class="fa fa-picture-o" aria-hidden="true"></i>お題:<%= i.theme.user.name%></p>
             <div class="root_answer_toukou_boke"><%= i.answer %></div></div>
-
             <%end%>
-
             <%end%>
           </div>
-
           <div class="reds">
             <p class="red">新着のボケ</p>
-
             <% @answer.each do |i|%>
             <% if i.theme.image? %>
-
             <div class="root_toukou_image_set"><%= image_tag  i.theme.image, class: "root_toukou_image" %>
-
               <p class="root_answer_toukou_user"><i class="fa fa-user-circle-o" aria-hidden="true"></i>ボケ:<%= i.user.name %>|<i class="fa fa-picture-o" aria-hidden="true"></i>お題:<%= i.theme.user.name%></p>
               <div class="root_answer_toukou_boke"><%= i.answer %></div></div>
-
               <%end%>
-
               <%end%>
-
             </div>
           </div>
-
         </div>
-
         <div class="rank">
           <h1>なんでやねん！！ ユーザーランキング</h1>
           <h2> <i class="fa fa-check-circle-o" aria-hidden="true"></i>要注意ユーザー<span><i class="fa fa-thumbs-o-down""></i></span></h2>
@@ -70,21 +54,15 @@
           <%=  User.find(bad[0]).name%> <span>さん</span>
           <%= bad[1] %> <span>なんでやねん!!</span><br>
           <% end%>
-        </div>
-
-        <%= link_to root_path do %>
-        <%= image_tag "gazou.png", class: "gazous" %>
-        <% end %>
-
-
-        <%= link_to root_path do %>
-        <%= image_tag "gazou2.png", class: "gazouss" %>
-        <% end %>
       </div>
-
-
-
-      <footer>
-        <p class="footer">Copyright(C) boketemasun.</p>
-      </footer>
-    </div>
+      <%= link_to root_path do %>
+      <%= image_tag "gazou.png", class: "gazous" %>
+      <% end %>
+      <%= link_to root_path do %>
+      <%= image_tag "gazou2.png", class: "gazouss" %>
+      <% end %>
+      </div>
+  <footer>
+    <p class="footer">Copyright(C) boketemasun.</p>
+  </footer>
+</div>
