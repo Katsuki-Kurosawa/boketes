@@ -21,7 +21,6 @@ class ThemesController < ApplicationController
     end
   end
 
-
   private
 
   def theme_params

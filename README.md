@@ -1,6 +1,5 @@
 # DB設計
 
-
 ## users table
 
 |Column|Type|Option|
@@ -12,7 +11,6 @@
 ### Association
 ・has_many :themes
 ・has_many :answers
-
 
 ## theme table
 
@@ -38,5 +36,3 @@
 ### Association
 ・belongs_to :user
 ・belongs_to :theme
-
-

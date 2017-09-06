@@ -13,9 +13,9 @@ class BadsController < ApplicationController
 
   def destroy
     bad = Bad.find_by(user_id: current_user.id, answer_id: params[:answer_id])
- if   bad.destroy
-  redirect_to answers_path
-end
+    if   bad.destroy
+      redirect_to answers_path
+    end
     @bads = Bad.where(answer_id: params[:answer_id])
     @answer = Answer.all.order("created_at  DESC").limit(20)
   end

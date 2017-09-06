@@ -1,24 +1,24 @@
 <% if user_signed_in? %>
 <% if answer.like_user(current_user.id) %>
 <div>
-<%= button_to answer_like_path(like, answer_id: answer.id), method: :delete, id: "like-button", remote: true , class: "like" do %>
-<p class="aaa">おもろい!!  取り消し<span><i class="fa fa-hand-paper-o fa-bad"></i></span></p>
-<% end %>
+  <%= button_to answer_like_path(like, answer_id: answer.id), method: :delete, id: "like-button", remote: true , class: "like" do %>
+  <p class="aaa">おもろい!!  取り消し<span><i class="fa fa-hand-paper-o fa-bad"></i></span></p>
+  <% end %>
 </div>
 <% else %>
 <div>
-<%= button_to answer_likes_path(answer), id: "like-button", method: :post,remote: true , class: "likes"  do %>
-<p> おもろい!!<span><i class="fa fa-hand-peace-o" aria-hidden="true"></i></span></p>
-<% end %>
+  <%= button_to answer_likes_path(answer), id: "like-button", method: :post,remote: true , class: "likes"  do %>
+  <p> おもろい!!<span><i class="fa fa-hand-peace-o" aria-hidden="true"></i></span></p>
+  <% end %>
 </div>
 <% end %>
 <% end %>
 <div class="likes_box">
-<% if answer.likes_count == nil %>
-<p class="likes_count">  <%= 0 %></p>
-<% else %>
-<p class="likes_count">  <%= answer.likes_count %></p>
-<% end %>
+  <% if answer.likes_count == nil %>
+  <p class="likes_count">  <%= 0 %></p>
+  <% else %>
+  <p class="likes_count">  <%= answer.likes_count %></p>
+  <% end %>
 </div>
 
 
